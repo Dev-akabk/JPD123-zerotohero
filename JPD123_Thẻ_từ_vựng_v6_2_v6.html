@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JPD123 – Thẻ từ vựng</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f6f7fb;--sf:#fff;--tx:#1d2240;--mu:#6b7194;--bd:#dde0ee;--ac:#4255ff;--ok:#18a874;--no:#e5484d;--lr:#f5a524}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0e1020;--sf:#191c34;--tx:#eceefb;--mu:#9aa0c8;--bd:#2c3050;--ac:#7c8bff}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0e1020;--sf:#191c34;--tx:#eceefb;--mu:#9aa0c8;--bd:#2c3050;--ac:#7c8bff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans JP",sans-serif}
+main{max-width:60vw;min-width:360px;width:100%;margin:0 auto;padding:16px}
+h1{font-size:22px;margin:4px 0 2px}h2{font-size:18px;margin:0}.mu{color:var(--mu);font-size:14px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+button{font:inherit;color:inherit;background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:9px 14px;cursor:pointer}
+button.p{background:var(--ac);border-color:var(--ac);color:#fff}button.on{border-color:var(--ac);color:var(--ac);font-weight:600}
+.tabs{display:flex;gap:6px;margin:14px 0}.tabs button{flex:1}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.chip{text-align:left;padding:12px}.chip b{display:block}
+.bar{height:6px;background:var(--bd);border-radius:9px;overflow:hidden;margin-top:8px}.bar i{display:block;height:100%;background:var(--ok)}
+.card{background:var(--sf);border:1px solid var(--bd);border-radius:18px;min-height:260px;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;font-size:34px;font-weight:600;cursor:pointer;margin:14px 0;user-select:none;word-break:break-word}
+.card.b{font-size:26px;color:var(--ac)}
+.act{display:flex;gap:10px}.act button{flex:1;padding:14px;font-weight:600}.no{color:var(--no)}.yes{color:var(--ok)}
+.list{background:var(--sf);border:1px solid var(--bd);border-radius:12px;margin-top:14px}
+.w{display:flex;gap:10px;padding:9px 12px;border-bottom:1px solid var(--bd);align-items:center}.w:last-child{border:0}
+.w span:nth-child(2){flex:1}.dot{width:12px;height:12px;border-radius:50%;background:var(--bd);cursor:pointer;flex:none}.d1{background:var(--lr)}.d2{background:var(--ok)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+details{background:var(--sf);border:1px solid var(--bd);border-radius:12px;margin:8px 0}
+summary{padding:12px 14px;cursor:pointer;font-weight:600;display:flex;justify-content:space-between;gap:8px}
+.gr{padding:0 14px 14px}.gr p{margin:0 0 12px;color:var(--mu);font-size:15px}
+.q{font-size:20px;margin:16px 0;line-height:1.6}
+.op{display:block;width:100%;text-align:left;margin:8px 0;padding:13px 14px;font-size:18px}
+.op.yes{border-color:var(--ok);background:rgba(24,168,116,.14)}.op.no{border-color:var(--no);background:rgba(229,72,77,.14)}
+.fb{padding:12px 14px;margin-top:10px;border-radius:10px;border:1px solid var(--bd);background:var(--sf);font-weight:600}.fb.yes{border-color:var(--ok)}.fb.no{border-color:var(--no)}.ex{font-weight:400;color:var(--tx);margin-top:4px;font-size:15px}#fsb{position:fixed;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:20;width:44px;height:44px;border-radius:50%;padding:0;font-size:20px;box-shadow:0 2px 8px rgba(0,0,0,.25)}#fsb[hidden]{display:none}
+.dd{margin:10px 0}.ddb{width:100%;display:flex;justify-content:space-between;padding:14px 16px;font-weight:600;font-size:17px}.ddl{margin-top:6px;background:var(--sf);border:1px solid var(--bd);border-radius:12px;padding:6px;display:grid;gap:4px}.ddl button{text-align:left;border:0}
+.zc{background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:16px;margin:12px 0}.zc p{margin:6px 0 12px}.sp-item{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;text-align:left;margin:6px 0;padding:12px 14px}.sp-item small{color:var(--mu)}
+.sp-card{background:var(--sf);border:1px solid var(--bd);border-radius:18px;min-height:280px;padding:24px;margin:14px 0;font-size:24px;line-height:2.1;word-break:break-word}.sp-card.hid{display:flex;align-items:center;justify-content:center;color:var(--mu);font-size:15px;line-height:1.5;text-align:center;background:#fff;border-style:dashed}
+:root[data-theme="dark"] .sp-card.hid{background:#fff}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .sp-card.hid{background:#fff}}
+.sp-txt{line-height:1.3}.rk{display:inline-block;vertical-align:top;text-align:center;padding:2px 3px;margin-bottom:8px;border-radius:8px}.rk .jp{display:block;font-size:24px;line-height:1.5}.rk .rm{display:block;font-size:12px;line-height:1.4;min-height:1.4em;white-space:nowrap;color:var(--mu)}
+.sp-txt:not(.ro) .rk.t{cursor:pointer;outline-offset:1px}.sp-txt:not(.ro) .rk.t .rm{filter:blur(6px);opacity:.55;user-select:none;transition:filter .18s ease,opacity .18s ease,color .18s}
+.sp-txt .rk.pin .rm,.sp-txt.all .rk .rm,.sp-txt .rk.t:focus-visible .rm{filter:none!important;opacity:1!important;user-select:text}.sp-txt .rk.pin .rm{color:var(--ac)}
+@media (hover:hover){.sp-txt:not(.ro) .rk.t:hover .rm{filter:none;opacity:1}.sp-txt:not(.ro) .rk.t:hover{background:var(--bg)}}
+.sp-txt.nr .rm{visibility:hidden}
+.sp-cd{font-size:40px;font-weight:700;color:var(--ac);text-align:center;margin:6px 0 0;font-variant-numeric:tabular-nums}.sp-big{font-size:46px;font-weight:700;color:var(--ok);font-variant-numeric:tabular-nums}
+.sp-rec{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--no);margin-right:6px;animation:spb 1s infinite}@keyframes spb{50%{opacity:.25}}
+.ft-dd{position:relative}
+.ft-dd summary{list-style:none;padding:6px 10px;background:var(--sf);border:1px solid var(--bd);border-radius:10px;cursor:pointer;font-weight:600}
+.ft-dd summary::-webkit-details-marker{display:none}
+.ft-menu{position:absolute;right:0;top:100%;margin-top:4px;background:var(--sf);border:1px solid var(--bd);border-radius:12px;padding:6px;z-index:50;width:240px;box-shadow:0 4px 12px rgba(0,0,0,.15);display:grid;gap:4px;max-height:70vh;overflow-y:auto}
+.ft-menu button{text-align:left;border:0;padding:8px 12px;font-size:15px}
+.ft-menu .sec{font-size:12px;color:var(--mu);padding:4px 8px;margin-top:4px;font-weight:600;text-transform:uppercase}
+:root{--fs:1;--lhm:1}
+body,button{font-family:var(--ff,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans JP",sans-serif)}
+.card{font-size:calc(34px * var(--fs))!important}
+.card.b{font-size:calc(26px * var(--fs))!important}
+.q{font-size:calc(20px * var(--fs))!important}
+.sp-card{font-size:calc(24px * var(--fs))!important;line-height:calc(2.1 * var(--lhm))!important}
+.sp-txt{line-height:calc(1.3 * var(--lhm))!important}
+.sp-txt .jp{line-height:calc(1.5 * var(--lhm))!important}
+.sp-txt .rm{font-family:system-ui,-apple-system,sans-serif!important}
+body,button,.list,.w{font-size:calc(16px * var(--fs))}
+.mu{font-size:calc(14px * var(--fs))}
+.op{font-size:calc(18px * var(--fs))}
+h1{font-size:calc(22px * var(--fs))}
+h2{font-size:calc(18px * var(--fs))}
+</style></head><body><main id="app"></main><button id="fsb" onclick="fs()" aria-label="Fullscreen" title="Fullscreen">⛶</button>
+<script>
+const T={A:["Động từ","Verbs"],B:["Tính từ","Adjectives"],C:["Ăn uống","Food & drink"],D:["Đồ vật","Objects"],E:["Địa điểm & phương tiện","Places & transport"],F:["Thời gian","Time"],G:["Con người","People"],H:["Vị trí & phương hướng","Position & direction"],I:["Từ nối & giao tiếp","Connectors & phrases"],J:["Khác","Other"]};
+const EN=`think|between|day after tomorrow|tomorrow|wash|on foot|there is (thing); to be at|house|good, nice|dog|put in|need|chair|someday|forever|there is (person/animal); to be at|together|no|now|welcome (to a shop)|above, on|picture|cinema|station|delicious|many, a lot|big|put, place|customer|alcohol, sake|plate|teach, tell|castle|tea|restroom|day before yesterday|stomach|rice ball|bath|lunch box|shop|shopping|ticket gate|write|certainly (polite)|singer|new|not very|sweet|family|way of ~ing|borrow, rent|spicy|river|easy|school|tree|beef|ticket|feeling|yesterday|cut|dislike|pretty, clean|bank|medicine|fruit|car|scenery|healthy, well|police box|coffee|rice, meal|this year|this month|this week|next time|from now on|wallet|fish|sugar|cold (weather)|salt|but|quiet|below, under|bicycle|vending machine|well then|cafeteria|do|weekend|soy sauce|John|like|sukiyaki|amazing|spoon|sports|excuse me, sorry|sour|last month|last week|and, then|all, everything|that's right|outside|about time to|tall, expensive|hard, tough|cigarette|all right, OK|building|who|small|near|map|subway|a little|turn on|workplace, job|plan, intend|hand|table|help|department store|but|electricity, light|train|telephone|microwave|and|toilet|far|where|which, where|which ~|how much, how long|friend|take, pick up, take (a photo)|which one|drive|what kind of|inside|lively, bustling|Japanese food|Japanese language|news|right?|necktie|drink|yes|bus|bus stop|passport|flower|chopsticks|dinner|I was surprised|video|person|art museum|left|free (time)|east|piano|low|one (thing)|two people|winter|fork|clothes|old|room|study|want|mailbox|book|front, before|not yet, still|town, city|straight|again, see you|window|middle, centre|right|green|water|swimsuit|everyone|difficult|already|glasses|hold, carry|take (with you)|hello (phone)|baseball|grill, bake, burn|vegetables|rest, day off|cheap, easy|early evening|famous|beside, side|often, well|next month|next week|next year|cooking, dish|refrigerator|I, me|understand|wow|promise, appointment|mountain|famous|errand, business|if you like`.split('|');
+const K=`ひがし=東|Đông
+にし=西|Tây
+みなみ=南|Nam
+きた=北|Bắc
+まんなか=真ん中|Chân trung
+くるま=車|Xa
+でんしゃ=電車|Điện xa
+ひこうき=飛行機|Phi hành cơ
+しんかんせん=新幹線|Tân cán tuyến
+えき=駅|Dịch
+まち=町|Đinh
+やま=山|Sơn
+かわ=川|Xuyên
+き=木|Mộc
+はな=花|Hoa
+ひと=人|Nhân
+いえ=家|Gia
+いぬ=犬|Khuyển
+おしろ=お城|Thành
+おてら=お寺|Tự
+じんじゃ=神社|Thần xã
+おんせん=温泉|Ôn tuyền
+ちかてつ=地下鉄|Địa hạ thiết
+がっこう=学校|Học hiệu
+ぎんこう=銀行|Ngân hàng
+いま=今|Kim
+きのう=昨日|Tạc nhật
+きょう=今日|Kim nhật
+あした=明日|Minh nhật
+けさ=今朝|Kim triêu
+こんばん=今晩|Kim vãn
+こんしゅう=今週|Kim chu
+せんしゅう=先週|Tiên chu
+らいしゅう=来週|Lai chu
+こんげつ=今月|Kim nguyệt
+せんげつ=先月|Tiên nguyệt
+らいげつ=来月|Lai nguyệt
+ことし=今年|Kim niên
+きょねん=去年|Khứ niên
+らいねん=来年|Lai niên
+まいにち=毎日|Mỗi nhật
+まいしゅう=毎週|Mỗi chu
+まいつき=毎月|Mỗi nguyệt
+まいとし=毎年|Mỗi niên
+ごぜん=午前|Ngọ tiền
+ごご=午後|Ngọ hậu
+ぜんじつ=前日|Tiền nhật
+せんじつ=先日|Tiên nhật
+じかん=時間|Thời gian
+しゅうまつ=週末|Chu mạt
+いちねんじゅう=一年中|Nhất niên trung
+ふゆ=冬|Đông
+いきます=行きます|Hành
+きます=来ます|Lai
+かえります=帰ります|Quy
+あいます=会います|Hội
+みます=見ます|Kiến
+たべます=食べます|Thực
+のみます=飲みます|Ẩm
+かいます=買います|Mãi
+かいもの=買い物|Mãi vật
+ききます=聞きます|Văn
+よみます=読みます|Độc
+かきます=書きます|Thư
+はなします=話します|Thoại
+いいます=言います|Ngôn
+やすみます=休みます|Hưu
+べんきょう=勉強|Miễn cường
+でんわ=電話|Điện thoại
+ぎゅうにく=牛肉|Ngưu nhục
+りょうり=料理|Liệu lý
+やさい=野菜|Dã thái
+にほんご=日本語|Nhật Bản ngữ
+おおきい=大きい|Đại
+ちいさい=小さい|Tiểu
+おおい=多い|Đa
+あたらしい=新しい|Tân
+ふるい=古い|Cổ
+たかい=高い|Cao
+ひくい=低い|Đê
+やすい=安い|An
+さむい=寒い|Hàn
+すき=好き|Hảo
+きらい=嫌い|Hiềm
+ゆうめい=有名|Hữu danh
+しずか=静か|Tĩnh
+げんき=元気|Nguyên khí
+ひま=暇|Hạ
+ともだち=友達|Hữu đạt
+かぞく=家族|Gia tộc
+みず=水|Thủy
+おちゃ=お茶|Trà
+おさけ=お酒|Tửu
+さかな=魚|Ngư
+ごはん=ご飯|Phạn
+ほん=本|Bản
+うえ=上|Thượng
+した=下|Hạ
+なか=中|Trung
+そと=外|Ngoại
+まえ=前|Tiền
+ひだり=左|Tả
+みぎ=右|Hữu`.split('\n').reduce((o,l)=>{const[a,b]=l.split('=');o[a]=b.replace('|',' – ');return o},{});
+const D=`おもいます|Nghĩ rằng|A
+あいだ|Ở giữa|H
+あさって|Ngày mốt|F
+あした|Ngày mai|F
+あらいます|Rửa|A
+あるいて（歩いて）|Đi bộ|A
+あります|Có (đồ vật); ở, tại|A
+いえ|Nhà|D
+いい|Tốt, được, hay|B
+いぬ|Chó|J
+いれます|Cho vào|A
+いります|Cần|A
+いす|Ghế|D
+いつか|Khi nào|I
+いつまでも|Mãi mãi|I
+います|Có; ở, tại (người, động vật)|A
+いっしょに|Cùng nhau|I
+いいえ|Không|I
+いま（今）|Bây giờ|F
+いらっしゃいませ|Xin chào quý khách (khi khách vào cửa hàng)|I
+うえ|Trên|H
+え|Bức tranh|D
+えいがかん|Rạp chiếu phim|E
+えき|Nhà ga|E
+おいしい|Ngon|B
+おおい (多い)|Nhiều ~|B
+おおきい (大きい)|To, lớn|B
+おきます|Để, đặt|A
+おきゃくさま|Quý khách, khách hàng|G
+おさけ|Rượu|C
+おさら|Đĩa|D
+おしえます|Dạy, chỉ|A
+おしろ|Lâu đài|E
+おちゃ|Trà|C
+おてあらい|Nhà vệ sinh|E
+おととい|Hôm kia|F
+おなか|Bụng|G
+おにぎり|Cơm nắm|C
+おふろ|Bồn tắm|D
+おべんとう|Cơm hộp|C
+おみせ|Cửa hàng|E
+かいもの|Mua sắm|J
+かいさつ|Cổng soát vé|E
+かきます|Viết|A
+かしこまりました|Tôi đã hiểu (lịch sự)|I
+かしゅ|Ca sĩ|G
+あたらしい|Mới|B
+あまり|Không ... lắm|I
+あまい|Ngọt|B
+かぞく|Gia đình|G
+かた|Cách, phương pháp|I
+かります|Mượn, thuê|A
+からい|Cay|B
+かわ|Sông|J
+かんたん|Dễ dàng|B
+がっこう|Trường học|E
+き|Cây|J
+ぎゅうにく|Thịt bò|C
+きっぷ|Vé|D
+きもち|Cảm xúc|I
+きのう|Hôm qua|F
+きります|Cắt|A
+きらい|Ghét|B
+きれい|Đẹp, sạch sẽ|B
+ぎんこう|Ngân hàng|E
+くすり|Thuốc|D
+くだもの|Trái cây|C
+くるま|Xe hơi|D
+けしき|Phong cảnh|J
+げんき|Khỏe mạnh|B
+こうばん|Đồn cảnh sát|E
+コーヒー|Cà phê|C
+ごはん|Cơm|C
+ことし|Năm nay|F
+こんげつ|Tháng này|F
+こんしゅう|Tuần này|F
+こんど|Lần tới|F
+これから|Từ giờ trở đi|I
+さいふ|Ví tiền|D
+さかな|Cá|C
+さとう|Đường|C
+さむい|Lạnh|B
+しお|Muối|C
+しかし|Nhưng|I
+しずか|Yên tĩnh|B
+した|Dưới|H
+じてんしゃ|Xe đạp|D
+じどうはんばいき|Máy bán hàng tự động|D
+じゃあ|Vậy thì|I
+しょくどう|Nhà ăn|E
+します|Làm|A
+しゅうまつ|Cuối tuần|F
+しょうゆ|Xì dầu|C
+ジョン|John|G
+すき|Thích|B
+すきやき|Món lẩu sukiyaki|C
+すごい|Tuyệt vời|B
+スプーン|Muỗng, thìa|D
+スポーツ|Thể thao|J
+すみません|Xin lỗi|I
+すっぱい|Chua|B
+せんげつ|Tháng trước|F
+せんしゅう|Tuần trước|F
+そして|Và, sau đó|I
+ぜんぶ|Toàn bộ, tất cả|I
+そうですね|Đúng vậy|I
+そと|Bên ngoài|H
+そろそろ|Sắp sửa|I
+たかい|Cao, đắt|B
+たいへん|Khó khăn, vất vả|B
+たばこ|Thuốc lá|D
+だいじょうぶ|Ổn, không sao|B
+たてもの|Tòa nhà|E
+だれ|Ai|G
+ちいさい|Nhỏ, bé|B
+ちかい|Gần|B
+ちず|Bản đồ|D
+ちかてつ|Tàu điện ngầm|E
+ちょっと|Một chút|I
+つけます|Bật (thiết bị)|A
+つとめ|Công ty|E
+つもり|Dự định|I
+て|Tay|G
+テーブル|Bàn|D
+てつだいます|Giúp đỡ|A
+デパート|Cửa hàng bách hóa|E
+でも|Nhưng|I
+でんき|Điện|D
+でんしゃ|Xe lửa|E
+でんわ|Điện thoại|D
+でんしレンジ|Lò vi sóng|D
+と|Và|I
+トイレ|Nhà vệ sinh|E
+とおい|Xa|B
+どこ|Ở đâu|I
+どちら|Cái nào, nơi nào|I
+どの|~ nào|I
+どのくらい|Khoảng bao nhiêu, bao lâu|I
+ともだち|Bạn bè|G
+とります|Lấy, cầm, chụp (ảnh)|A
+どれ|Cái nào|I
+ドライブ|Lái xe|J
+どんな|Như thế nào|I
+なか|Bên trong|H
+にぎやか|Nhộn nhịp, sôi nổi|B
+にほんりょうり|Món ăn Nhật|C
+にほんご|Tiếng Nhật|J
+ニュース|Tin tức|J
+ね|Nhỉ|I
+ネクタイ|Cà vạt|D
+のみます|Uống|A
+はい|Vâng, dạ|I
+バス|Xe buýt|E
+バスてい|Trạm xe buýt|E
+パスポート|Hộ chiếu|D
+はな|Hoa|J
+はし|Đũa|D
+ばんごはん|Bữa tối|C
+びっくりしました|Bất ngờ, ngạc nhiên|I
+ビデオ|Video|D
+ひと|Người|G
+びじゅつかん|Bảo tàng mỹ thuật|E
+ひだり|Bên trái|H
+ひま|Rảnh rỗi|B
+ひがし|Phía đông|H
+ピアノ|Piano|J
+ひくい|Thấp|B
+ひとつ|Một cái|I
+ふたり|Hai người|G
+ふゆ|Mùa đông|F
+フォーク|Cái nĩa|D
+ふく|Quần áo|D
+ふるい|Cũ, cổ xưa|B
+へや|Phòng|D
+べんきょう|Học tập|A
+ほしい|Muốn có|B
+ポスト|Hộp thư|D
+ほん|Sách|D
+まえ|Trước, phía trước|H
+まだ|Chưa|I
+まち|Thị trấn, thành phố|E
+まっすぐ|Thẳng|H
+また|Hẹn gặp lại, lần nữa|I
+まど|Cửa sổ|D
+まんなか|Chính giữa|H
+みぎ|Bên phải|H
+みどり|Màu xanh lá cây|J
+みず|Nước|C
+みずぎ|Đồ bơi|D
+みんな|Mọi người|G
+むずかしい|Khó|B
+もう|Đã, rồi|I
+メガネ|Kính|D
+もちます|Cầm, mang|A
+もっていきます|Mang đi|A
+もしもし|Alo (khi nói chuyện điện thoại)|I
+やきゅう|Bóng chày|J
+やきます|Nướng, thiêu đốt|A
+やさい|Rau củ|C
+やすみ|Nghỉ ngơi|F
+やすい|Rẻ, dễ|B
+ゆうがた|Chiều tối|F
+ゆうめい|Nổi tiếng|B
+よこ|Bên cạnh|H
+よく|Thường, hay|I
+らいげつ|Tháng sau|F
+らいしゅう|Tuần sau|F
+らいねん|Năm tới|F
+りょうり|Nấu ăn|C
+れいぞうこ|Tủ lạnh|D
+わたし|Tôi|G
+わかります|Hiểu|A
+わあ|Woa (cảm thán)|I
+やくそく|Lời hứa, cuộc hẹn|I
+やま|Núi|J
+ゆうめい (な)|Nổi tiếng|B
+ようじ|Công việc|I
+よかったら|Nếu bạn muốn|I
+にし|Phía tây|H|west
+みなみ|Phía nam|H|south
+きた|Phía bắc|H|north
+しんかんせん|Tàu siêu tốc shinkansen|E|bullet train
+ひこうき|Máy bay|E|airplane
+おんせん|Suối nước nóng|J|hot spring
+おてら|Chùa|E|temple
+じんじゃ|Đền thờ|E|shrine
+いきます|Đi|A|go
+きます|Đến|A|come
+かえります|Về|A|return, go home
+あいます|Gặp|A|meet
+みます|Xem, nhìn, ngắm|A|look, watch
+たべます|Ăn|A|eat
+かいます|Mua|A|buy
+ききます|Nghe, hỏi|A|listen, ask
+よみます|Đọc|A|read
+はなします|Nói chuyện|A|talk, speak
+つくります|Nấu, làm|A|cook, make
+のぼります|Leo (núi)|A|climb
+はいります|Vào, bước vào|A|enter
+やすみます|Nghỉ|A|rest, take a day off
+いいます|Nói|A|say
+つかいます|Sử dụng|A|use
+だします|Lấy ra|A|take out
+かします|Cho mượn|A|lend
+せんたくします|Giặt giũ|A|do laundry
+そうじします|Dọn dẹp|A|clean
+かいものします|Mua sắm|A|go shopping
+しょくじします|Dùng bữa|A|have a meal
+あそびます|Đi chơi|A|play, hang out
+うたいます|Hát|A|sing
+ひきます|Chơi (guitar, piano)|A|play (guitar, piano)
+すいます|Hút (thuốc)|A|smoke
+かけます|Gọi (điện thoại)|A|make (a call)
+あけます|Mở|A|open
+しめます|Đóng|A|close
+ねます|Ngủ|A|sleep
+けさ|Sáng nay|F|this morning
+きょう|Hôm nay|F|today
+こんばん|Tối nay|F|tonight
+きょねん|Năm ngoái|F|last year
+まいにち|Mỗi ngày|F|every day
+まいしゅう|Mỗi tuần|F|every week
+まいつき|Mỗi tháng|F|every month
+まいとし|Mỗi năm|F|every year
+ごぜん|Buổi sáng (AM)|F|a.m.
+ごご|Buổi chiều (PM)|F|p.m.
+ぜんじつ|Ngày hôm trước|F|the previous day
+せんじつ|Hôm nọ|F|the other day
+いちねんじゅう|Suốt cả năm|F|all year round
+じかん|Tiếng, thời gian|F|hour(s), time
+ふん／ぷん|Phút|F|minute(s)
+はん|Rưỡi, một nửa|F|half (past)
+わるい|Xấu, tệ|B|bad
+すくない|Ít|B|few, little
+あつい|Nóng (thời tiết, đồ vật)|B|hot
+あたたかい|Ấm áp|B|warm
+すずしい|Mát mẻ|B|cool
+つめたい|Lạnh (đồ vật)|B|cold (to the touch)
+おもしろい|Thú vị|B|interesting
+いそがしい|Bận rộn|B|busy
+たのしい|Vui vẻ|B|fun, enjoyable`.split('\n').map((l,i)=>{const[k,m,c,e]=l.split('|');return{id:i,k,m,t:c[0],e:e||EN[i]||m}});
+const ROWS=['あいうえお','かきくけこ','さしすせそ','たちつてと','なにぬねの','はひふへほ','まみむめも','やゆよ','らりるれろ','わをん'];
+const rowOf=w=>{let c=w.k[0];if(c>='ァ'&&c<='ヶ')c=String.fromCharCode(c.charCodeAt(0)-96);c=c.normalize('NFD')[0];return ROWS.findIndex(r=>r.includes(c))};
+D.forEach(w=>{w.r=rowOf(w);w.kj=K[w.k.replace(/\s*[（(].*[）)]/,'')]||''});
+const KEY='jpd123_v1';let P={},pref={dir:0,shuf:1,gs:{},lang:'vi'};
+try{const s=JSON.parse(localStorage.getItem(KEY)||'{}');P=s.p||{};pref=Object.assign(pref,s.pref||{})}catch(e){}
+const u=(v,e)=>pref.lang=='en'?e:v;
+const FTS=[['Mặc định hệ thống','System Default','system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans JP",sans-serif'],['Gothic (Dễ đọc)','Gothic (JP)','"Noto Sans JP","Hiragino Sans","Yu Gothic",Meiryo,sans-serif'],['Mincho (Truyền thống)','Mincho (JP)','"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho","MS Mincho",serif']];
+if(pref.ft==null)pref.ft=0;if(pref.fsz==null)pref.fsz=1;
+const applyFt=()=>{try{if(!FTS[pref.ft])pref.ft=0;document.documentElement.style.setProperty('--ff',FTS[pref.ft][2]);document.documentElement.style.setProperty('--fs',(pref.fsz==0?0.85:pref.fsz==2?1.25:1).toString());document.documentElement.style.setProperty('--lhm','1');save()}catch(e){}};
+const updateLg=()=>document.querySelectorAll('.lg-wrap').forEach(el=>el.outerHTML=lg());
+const setFt=i=>{pref.ft=i;applyFt();updateLg()};
+const setFsz=i=>{pref.fsz=i;applyFt();updateLg()};
+applyFt();
+const ll=l=>l.replace('Bài',u('Bài','Lesson'));
+const mn=w=>pref.lang=='en'?w.e:w.m;
+const kd=w=>`<div>${w.k}${w.kj?`<div style="font-size:18px;font-weight:400;color:var(--mu);margin-top:8px">${w.kj}</div>`:''}</div>`;
+const lg=()=>`<span class="row lg-wrap" style="gap:4px">${['vi','en'].map(k=>`<button class="${pref.lang==k?'on':''}" style="padding:6px 10px" onclick="setLang('${k}')">${k.toUpperCase()}</button>`).join('')}<details class="ft-dd"><summary title="Font">Aa</summary><div class="ft-menu"><div class="sec">${u('Phông chữ','Font')}</div>${FTS.map((f,i)=>`<button class="${pref.ft==i?'on':''}" style="font-family:${f[2]}" onclick="setFt(${i})">${u(f[0],f[1])}${pref.ft==i?' ✓':''}</button>`).join('')}<div class="sec">${u('Cỡ chữ','Size')}</div>${[0,1,2].map(i=>`<button class="${pref.fsz==i?'on':''}" onclick="setFsz(${i})">${u(['Nhỏ','Vừa','Lớn'][i],['Small','Medium','Large'][i])}${pref.fsz==i?' ✓':''}</button>`).join('')}</div></details></span>`;
+const setLang=k=>{pref.lang=k;save();SPS?sprender():S?study():cur?setView():ZQ?zq():tab=='g'?gram():home()};
+const ALL=()=>u('Tất cả từ vựng','All vocabulary');
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify({p:P,pref}))}catch(e){}};
+const st=id=>P[id]||0;
+let tab='t',cur=null,S=null;
+const $=s=>document.getElementById('app');
+const sets={t:()=>Object.entries(T).map(([k,n])=>({n:u(n[0],n[1]),ws:D.filter(w=>w.t===k)})),
+ a:()=>ROWS.map((r,i)=>({n:u('Hàng ','Row ')+r[0],ws:D.filter(w=>w.r===i)}))};
+const shuf=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const cnt=ws=>ws.filter(w=>st(w.id)==2).length;
+const bar=(ws)=>`<div class="bar"><i style="width:${ws.length?cnt(ws)/ws.length*100:0}%"></i></div>`;
+let nvo=0;
+const TN=()=>[['t','📚',u('Chủ đề','Topics')],['a','あ',u('Bảng chữ cái','Alphabet')],['g','📝',u('Ngữ pháp','Grammar')],['z','🏆',u('Quiz tổng','Master quiz')],['s','🎤','Speaking']];
+const pick=k=>{tab=k;nvo=0;home()};
+const tabs=()=>{const c=TN().find(x=>x[0]==tab);return `<div class="row" style="justify-content:flex-end;margin-top:8px">${lg()}</div><div class="dd"><button class="ddb" onclick="nvo^=1;home()"><span>${c[1]} ${c[2]}</span><span>${nvo?'▴':'▾'}</span></button>${nvo?`<div class="ddl">${TN().map(x=>`<button class="${x[0]==tab?'on':''}" onclick="pick('${x[0]}')">${x[1]} ${x[2]}${x[0]==tab?' ✓':''}</button>`).join('')}</div>`:''}</div>`};
+function home(){S=null;cur=null;ZQ=null;spStop();if(tab=='s')return shome();if(tab=='g')return gram();if(tab=='z')return zhome();const list=sets[tab]();const all={n:ALL(),ws:D};
+ $().innerHTML=`<h1>JPD123 – ${u('Từ vựng','Vocabulary')}</h1><div class="mu">${u(`${D.length} từ · đã thuộc ${cnt(D)}`,`${D.length} words · known ${cnt(D)}`)}</div>${bar(D)}
+ ${tabs()}
+ <div class="grid"><button class="chip" onclick="openSet(-1)"><b>${all.n}</b><span class="mu">${cnt(D)}/${D.length}</span>${bar(D)}</button>
+ ${list.map((s,i)=>`<button class="chip" onclick="openSet(${i})"><b>${s.n}</b><span class="mu">${cnt(s.ws)}/${s.ws.length}</span>${bar(s.ws)}</button>`).join('')}</div>
+ <p class="mu" style="margin-top:18px">${u('Tiến độ tự lưu trong trình duyệt.','Progress is saved in your browser.')}</p>`}
+function openSet(i){cur=i<0?{n:ALL(),ws:D}:sets[tab]()[i];cur.i=i;setView()}
+function setView(){S=null;const i0=cur.i;cur=i0<0?{n:ALL(),ws:D}:sets[tab]()[i0];cur.i=i0;const ws=cur.ws,n=cnt(ws),lr=ws.filter(w=>st(w.id)==1).length;
+ $().innerHTML=`<div class="top"><button onclick="home()">${u('← Quay lại','← Back')}</button><button onclick="resetSet()">${u('↺ Học lại từ đầu','↺ Reset')}</button>${lg()}</div>
+ <h2 style="margin-top:14px">${cur.n}</h2><div class="mu">${u(`${ws.length} từ · thuộc ${n} · đang học ${lr} · mới ${ws.length-n-lr}`,`${ws.length} words · known ${n} · learning ${lr} · new ${ws.length-n-lr}`)}</div>${bar(ws)}
+ <div class="row" style="margin:14px 0"><button class="${pref.shuf?'on':''}" onclick="pref.shuf^=1;save();setView()">🔀 ${u('Trộn','Shuffle')}</button>
+ <button class="${pref.dir?'on':''}" onclick="pref.dir^=1;save();setView()">${pref.dir?u('Việt → Nhật','Meaning → JP'):u('Nhật → Việt','JP → Meaning')}</button></div>
+ <div class="row"><button class="p" onclick="start('flash')">${u('Lật thẻ','Flip cards')}</button><button class="p" onclick="start('cram')">⚡ ${u('Nhồi nhét','Cram')}</button></div>
+ <div class="list">${ws.map(w=>`<div class="w"><span class="dot d${st(w.id)}" onclick="cyc(${w.id})" title="Đổi trạng thái"></span><span>${w.k}${w.kj?` <small class="mu">【${w.kj}】</small>`:''}</span><span class="mu">${mn(w)}</span></div>`).join('')}</div>`}
+function cyc(id){P[id]=(st(id)+1)%3;save();setView()}
+function resetSet(){if(!confirm(u('Xóa tiến độ của "'+cur.n+'" để học lại từ đầu?','Reset progress for "'+cur.n+'"?')))return;cur.ws.forEach(w=>delete P[w.id]);save();setView()}
+function start(mode){let ws=cur.ws;if(mode=='cram'){const u=ws.filter(w=>st(w.id)!=2);if(u.length)ws=u}
+ S={mode,q:(pref.shuf?shuf(ws):[...ws]).map(w=>w.id),i:0,f:0,total:ws.length,seen:0};study()}
+function study(){if(!S)return;const q=S.q,done=S.mode=='flash'?S.i>=q.length:!q.length;
+ if(done){$().innerHTML=`<div class="top"><button onclick="setView()">${u('← Thoát','← Exit')}</button></div><div class="card" style="cursor:default;flex-direction:column;gap:14px">🎉 ${u('Hoàn thành!','Done!')}<span class="mu" style="font-size:16px">${u(`Đã thuộc ${cnt(cur.ws)}/${cur.ws.length} từ trong học phần này`,`Known ${cnt(cur.ws)}/${cur.ws.length} words in this set`)}</span></div><div class="act"><button onclick="start('${S.mode}')">${u('Học lại','Again')}</button><button class="p" onclick="setView()">${u('Xong','Done')}</button></div>`;return}
+ const w=D[q[S.mode=='flash'?S.i:0]],fr=pref.dir?mn(w):kd(w),bk=pref.dir?kd(w):mn(w);
+ const prog=S.mode=='flash'?`${S.i+1}/${q.length}`:u(`Còn ${q.length} thẻ`,`${q.length} cards left`);
+ $().innerHTML=`<div class="top"><button onclick="setView()">${u('← Thoát','← Exit')}</button><span class="mu">${S.mode=='cram'?'⚡ '+u('Nhồi nhét','Cram')+' · ':''}${prog}</span>${lg()}</div>
+ <div class="card ${S.f?'b':''}" onclick="S.f^=1;study()">${S.f?bk:fr}</div><div class="mu" style="text-align:center">${u('Chạm thẻ hoặc nhấn Space để lật','Tap the card or press Space to flip')}</div>
+ <div class="act" style="margin-top:14px"><button class="no" onclick="ans(0)">✗ ${u('Chưa nhớ','Not yet')}</button><button class="yes" onclick="ans(1)">✓ ${u('Đã nhớ','Got it')}</button></div>
+ ${S.mode=='flash'?`<div class="row" style="margin-top:10px;justify-content:center"><button onclick="S.i=Math.max(0,S.i-1);S.f=0;study()">←</button><button onclick="S.i=Math.min(q.length,S.i+1);S.f=0;study()">→</button></div>`:''}`}
+function ans(ok){const id=S.q[S.mode=='flash'?S.i:0];P[id]=ok?2:1;save();S.f=0;
+ if(S.mode=='flash')S.i++;else{S.q.shift();if(!ok)S.q.splice(Math.min(3,S.q.length),0,id)}study()}
+document.addEventListener('keydown',e=>{if(!S||e.metaKey||e.ctrlKey)return;if(e.code=='Space'){e.preventDefault();S.f^=1;study()}else if(e.key=='ArrowRight')ans(1);else if(e.key=='ArrowLeft')ans(0)});
+const GR=[
+{l:'Bài 4',t:'Adjectives: affirmative & negative',r:'Adj-i: drop い + くないです (いい → よくないです). Adj-na and nouns: じゃありません. Special: きれい, ゆうめい, きらい are Adj-na even though they end in い.',q:[
+'Negative of あたらしい?|あたらしくないです|あたらしいくないです|あたらしじゃありません|あたらしくなかったです|Adj-i: drop い and add くないです. くなかった is the past tense.',
+'Negative of しずか?|しずかじゃありません|しずかくないです|しずかないです|しずかじゃないくです|しずか is an Adj-na, so it takes じゃありません.',
+'Negative of いいです?|よくないです|いくないです|いいくないです|いいじゃありません|いい is irregular: it becomes よ before くない.',
+'ベトナムは＿＿です。|きれい|きれいな|きれくない|きれいい|An Adj-na as predicate is just the stem + です. な is only used before a noun.',
+'Which one is an Adj-na even though it ends in い?|きらい|あつい|さむい|すずしい|きらい (dislike) is an Adj-na. The others are regular Adj-i.']},
+{l:'Bài 4',t:'Adjectives modifying nouns & joining adjectives',r:'Adj-i + N; Adj-na + な + N. N が Adj = adjective phrase (あめが おおい). Joining: そして (same direction), が (contrast).',q:[
+'ベトナムは＿＿国です。|きれいな|きれい|きれいの|きれいで|An Adj-na needs な before a noun.',
+'私のまちは＿＿まちです。|いい|いいな|いいの|いいが|An Adj-i attaches directly to the noun: いい + まち.',
+'このこうえんは おおきいです＿＿、みどりが すくないです。|が|そして|から|と|が joins two contrasting ideas (big BUT few trees).',
+'とうきょうは きれいです。＿＿、ゆうめいです。|そして|しかし|でも|だから|そして joins two similar, positive points. しかし and でも mean "but".',
+'Which sentence means "There is a lot of rain"?|あめが おおいです|あめを おおいです|あめに おおいです|あめで おおいです|N が Adj describes a feature of the topic, so the particle is が.']},
+{l:'Bài 4',t:'Transport で & asking duration',r:'N (transport) で V ます; on foot: あるいて いきます (no で). 何で = by what? P1 から P2 まで どのくらいですか → ~くらいです.',q:[
+'くるま＿＿ いきます。|で|を|に|が|で marks the means of transport.',
+'How do you say "go on foot"?|あるいて いきます|あるいで いきます|あるきで いきます|あるいてで いきます|On foot uses the て-form あるいて, with no で.',
+'Which question asks "by what means?"|なんで いきますか|なにを いきますか|どこで いきますか|だれで いきますか|何で (なんで) asks for the means of transport.',
+'Which question asks "how long does it take?"|どのくらいですか|どこですか|なんですか|いくつですか|どのくらい asks about duration or amount.',
+'うちから がっこうまで 5ふん＿＿です。|くらい|だけ|しか|ずつ|くらい means "about" after a quantity. しか needs a negative.']},
+{l:'Bài 5',t:'Past tense: verbs, nouns, adjectives',r:'V ました / V ませんでした. N でした / N じゃありませんでした. Adj-i: ~かったです / ~くなかったです (いい → よかったです). Adj-na works like N.',q:[
+'Past form of たべます?|たべました|たべます でした|たべたです|たべませんでした|Polite past: stem + ました. ませんでした is the negative past.',
+'Negative past of いきます?|いきませんでした|いきましたん|いきなかったです|いきません|Polite negative past: stem + ませんでした.',
+'Past of たのしいです?|たのしかったです|たのしいでした|たのしでした|たのしくなかったです|Adj-i past: drop い and add かったです.',
+'Past of いいです?|よかったです|いかったです|いいでした|よくなかったです|いい conjugates from よい, so the past is よかったです.',
+'きのうの パーティーは にぎやか＿＿。|でした|かったです|くなかったです|です|Adj-na past: stem + でした. きのう signals the past.']},
+{l:'Bài 5',t:'Doing things with someone, どこか / なにか',r:'N と V ます (with whom). Alone: ひとりで. どこか(へ) / なにか(を) V ましたか; answer No: どこも / なにも V ませんでした.',q:[
+'ともだち＿＿ べんきょうします。|と|で|を|に|と marks the person you do something with.',
+'Which means "I study alone"?|ひとりで べんきょうします|ひとりと べんきょうします|ひとりに べんきょうします|ひとりを べんきょうします|ひとりで = alone. で marks the manner.',
+'きのう、＿＿ へ いきましたか。はい、いきました。|どこか|どこも|なにか|だれか|どこか = somewhere. どこも needs a negative verb.',
+'いいえ、＿＿ たべませんでした。|なにも|なにか|どこも|なにを|なにも + negative = nothing at all.',
+'Which asks "Who do you study with?"|だれと べんきょうしますか|どこと べんきょうしますか|なにと べんきょうしますか|だれか べんきょうしますか|だれ (who) + と (with).']},
+{l:'Bài 5',t:'Likes, wants, reasons & purpose',r:'N が すき / きらい / ほしい です. V たいです (stem + たい). どうして ~? → ~から. P へ V に いきます (V in stem form).',q:[
+'私は ベトナムの たべものが＿＿。|すきです|すきな です|すきを です|すきに です|Likes and dislikes take が: N が すきです.',
+'Which means "I want to study"?|べんきょうしたいです|べんきょうますたいです|べんきょうしますたいです|べんきょうしたです|Stem (drop ます) + たいです: べんきょうし + たいです.',
+'＿＿ FPTだいがくで べんきょうしますか。いいですから。|どうして|どこ|だれ|いつ|The answer ~から gives a reason, so the question word is どうして (why).',
+'In いいですから, what does から mean?|because|until|than|only|から after a clause gives a reason.',
+'たべ＿＿ いきます。|に|で|を|が|V-stem + に いきます = go in order to do V.']},
+{l:'Bài 6',t:'Invitations, refusals & events',r:'いっしょに ~ V ませんか → accept: いいですね / V ましょう. Decline: すみません、~から. P で N (event) が あります; P に N (thing) が あります.',q:[
+'いっしょに えいがを みません＿＿。|か|ね|よ|を|V ませんか is the invitation pattern. か makes it a question.',
+'Which accepts "いっしょに えいがを みませんか"?|いいですね。みましょう。|すみません。ちょっと…|いいえ、だいじょうぶです|ありがとう|いいですね + V ましょう shows agreement. すみません、ちょっと… is a polite refusal.',
+'ハノイ＿＿ コンサートが あります。|で|に|を|は|Events take place at a location marked by で.',
+'つくえの うえ＿＿ ほんが あります。|に|で|を|と|The existence of a thing is marked with に + あります.',
+'いそがしいです＿＿、いけません。|から|まで|より|も|から gives the reason "because".']},
+{l:'Bài 6',t:'Superlative & comparison',r:'Superlative: range で N が いちばん Adj. Two items: A と B と どちらが Adj か → ~の ほうが Adj / どちらも Adj. A は B より Adj (affirmative only).',q:[
+'Which word makes the superlative "the most"?|いちばん|もっと|とても|あまり|いちばん = the most. とても means "very".',
+'すしと ラーメンと＿＿が すきですか。|どちら|どれ|だれ|いつ|When comparing two items, ask with どちら.',
+'すしの＿＿が すきです。|ほう|ほし|いちばん|より|A の ほうが = "the A side is preferred".',
+'How do you say "I like both"?|どちらも すきです|どちらが すきです|どれも すきです|いちばん すきです|どちらも = both of two.',
+'ホーチミンしは ハノイ＿＿ ひとが おおいです。|より|から|まで|ほど|A は B より Adj = A is more Adj than B.']},
+{l:'Bài 6',t:'もう & まだ',r:'もう V ましたか → はい、もう V ました / いいえ、まだです.',q:[
+'もう カレーを たべましたか。Answer "not yet":|いいえ、まだです|いいえ、もうです|はい、まだです|いいえ、もう|"Not yet" = いいえ、まだです.',
+'What does もう mean in もう ~ V ましたか?|already|not yet|definitely|very|もう + past tense asks "have you already ~?".',
+'What does まだ mean in いいえ、まだです?|not yet|already|together|many|まだ = still / not yet.',
+'もう ごはんを たべましたか。はい、＿＿ たべました。|もう|まだ|いつも|あまり|はい、もう V ました = "Yes, I already did."',
+'Which asks "Have you eaten yet?"|もう ごはんを たべましたか|まだ ごはんを たべましたか|もう ごはんを たべません|まだ ごはんを たべます|もう + V ましたか (past) asks if it has already happened.']},
+{l:'Bài 7',t:'あります / います & positions',r:'P に N が あります (things) / います (people, animals). N は P に あります / います. Positions: うえ, した, なか, そと, となり, あいだ, まえ, うしろ.',q:[
+'木の うえに ねこが＿＿。|います|あります|ありました|いりません|Living things use います.',
+'かばんの なかに さいふが＿＿。|あります|います|いません|いりません|Inanimate objects use あります.',
+'Which asks "Who is there?"|だれが いますか|だれが ありますか|なにが いますか|だれは いますか|だれ (who) pairs with います for people.',
+'What does なか mean?|inside|outside|on top|next to|なか = inside. そと is outside.',
+'Which word means "next to"?|となり|なか|うえ|あいだ|となり = next to. あいだ = between.']},
+{l:'Bài 7',t:'V-かた, わかります & ～ましょうか',r:'V-stem + かた = way of doing. N の V かた が わかります / わかりません. V ましょうか = "Shall I ~?"; reply: おねがいします / いいえ、だいじょうぶです.',q:[
+'Make "way of reading" from よみます:|よみかた|よむかた|よましかた|よみますかた|Drop ます and add かた.',
+'でんしレンジの つかいかた＿＿ わかりません。|が|を|に|で|わかります / わかりません mark the thing understood with が.',
+'てつだい＿＿か。|ましょう|ます|ません|たい|V ましょうか = "Shall I ~ for you?"',
+'A: てつだいましょうか。 B: ＿＿。|おねがいします|いただきます|ごちそうさま|おやすみなさい|おねがいします accepts an offer of help.',
+'カレーの＿＿を おしえてください。|つくりかた|つくるかた|つくかた|つくりますかた|Verb stem つくり + かた = way of making.']},
+{l:'Bài 7',t:'て-form, ～ています & ～てください',r:'Group 1: い・ち・り → って; み・に・び → んで; き → いて (いきます → いって); ぎ → いで; し → して. Groups 2 & 3: drop ます + て. V ています = is doing. V てください = please do.',q:[
+'て-form of かいます?|かって|かいて|かんで|かいで|い・ち・り endings become って.',
+'て-form of のみます?|のんで|のいて|のって|のみて|み・に・び endings become んで.',
+'て-form of かきます?|かいて|かいで|かって|かんで|き becomes いて. ぎ becomes いで.',
+'て-form of いきます (irregular)?|いって|いいて|いきて|いんで|いきます is the exception: いって, not いいて.',
+'かんじを よんで＿＿。|ください|います|ましょう|ませんか|V て + ください = please do V.']}
+];
+const VI=[
+{t:'Tính từ: khẳng định & phủ định',r:'Adj-i: bỏ い + くないです (いい → よくないです). Adj-na và danh từ: じゃありません. Đặc biệt: きれい, ゆうめい, きらい là Adj-na dù có đuôi い.',q:[
+'Thể phủ định của あたらしい?|Adj-i: bỏ い và thêm くないです. くなかった là thì quá khứ.',
+'Thể phủ định của しずか?|しずか là Adj-na nên dùng じゃありません.',
+'Thể phủ định của いいです?|いい là bất quy tắc: đổi thành よ trước くない.',
+'|Adj-na làm vị ngữ chỉ cần gốc từ + です. な chỉ dùng trước danh từ.',
+'Tính từ nào là Adj-na dù kết thúc bằng い?|きらい (ghét) là Adj-na. Các từ còn lại là Adj-i bình thường.']},
+{t:'Tính từ bổ nghĩa danh từ & nối tính từ',r:'Adj-i + N; Adj-na + な + N. N が Adj = cụm tính từ (あめが おおい). Nối: そして (cùng chiều), が (tương phản).',q:[
+'|Adj-na cần な trước danh từ.',
+'|Adj-i đi thẳng với danh từ: いい + まち.',
+'|が nối hai ý tương phản (to NHƯNG ít cây xanh).',
+'|そして nối hai ý tương đồng, tích cực. しかし và でも nghĩa là "nhưng".',
+'Câu nào nghĩa là "Mưa nhiều"?|N が Adj mô tả đặc điểm của chủ đề nên trợ từ là が.']},
+{t:'Phương tiện で & hỏi thời gian',r:'N (phương tiện) で V ます; đi bộ: あるいて いきます (không dùng で). 何で = bằng gì? P1 から P2 まで どのくらいですか → ~くらいです.',q:[
+'|で chỉ phương tiện di chuyển.',
+'Nói "đi bộ" như thế nào?|Đi bộ dùng thể て あるいて, không có で.',
+'Câu nào hỏi "bằng phương tiện gì?"|何で (なんで) hỏi phương tiện.',
+'Câu nào hỏi "mất bao lâu?"|どのくらい hỏi khoảng thời gian hoặc số lượng.',
+'|くらい nghĩa là "khoảng" sau số lượng. しか phải đi với phủ định.']},
+{t:'Thì quá khứ: động từ, danh từ, tính từ',r:'V ました / V ませんでした. N でした / N じゃありませんでした. Adj-i: ~かったです / ~くなかったです (いい → よかったです). Adj-na như N.',q:[
+'Thể quá khứ của たべます?|Quá khứ lịch sự: gốc + ました. ませんでした là phủ định quá khứ.',
+'Phủ định quá khứ của いきます?|Phủ định quá khứ lịch sự: gốc + ませんでした.',
+'Quá khứ của たのしいです?|Adj-i quá khứ: bỏ い và thêm かったです.',
+'Quá khứ của いいです?|いい chia từ よい nên quá khứ là よかったです.',
+'|Adj-na quá khứ: gốc + でした. きのう báo hiệu quá khứ.']},
+{t:'Làm gì cùng ai, どこか / なにか',r:'N と V ます (cùng ai). Một mình: ひとりで. どこか(へ) / なにか(を) V ましたか; trả lời Không: どこも / なにも V ませんでした.',q:[
+'|と chỉ người cùng làm.',
+'Câu nào nghĩa là "Tôi học một mình"?|ひとりで = một mình. で chỉ cách thức.',
+'|どこか = đâu đó. どこも cần động từ phủ định.',
+'|なにも + phủ định = không gì cả.',
+'Câu nào hỏi "Bạn học với ai?"|だれ (ai) + と (cùng).']},
+{t:'Thích, muốn, lý do & mục đích',r:'N が すき / きらい / ほしい です. V たいです (gốc + たい). どうして ~? → ~から. P へ V に いきます (V ở dạng gốc).',q:[
+'|Thích/ghét dùng が: N が すきです.',
+'Câu nào nghĩa là "Tôi muốn học"?|Gốc (bỏ ます) + たいです: べんきょうし + たいです.',
+'|Câu trả lời ~から nêu lý do nên từ hỏi là どうして (tại sao).',
+'Trong いいですから, から nghĩa là gì?|から sau mệnh đề nêu lý do.|vì|cho đến khi|hơn|chỉ',
+'|V-gốc + に いきます = đi để làm V.']},
+{t:'Lời mời, từ chối & sự kiện',r:'いっしょに ~ V ませんか → đồng ý: いいですね / V ましょう. Từ chối: すみません、~から. P で N (sự kiện) が あります; P に N (vật) が あります.',q:[
+'|V ませんか là mẫu mời rủ. か tạo câu hỏi.',
+'Câu nào đồng ý lời mời "いっしょに えいがを みませんか"?|いいですね + V ましょう thể hiện sự đồng ý. すみません、ちょっと… là từ chối lịch sự.',
+'|Sự kiện diễn ra ở địa điểm đánh dấu bằng で.',
+'|Sự tồn tại của vật dùng に + あります.',
+'|から nêu lý do "vì".']},
+{t:'So sánh nhất & so sánh hơn',r:'So sánh nhất: phạm vi で N が いちばん Adj. Hai đối tượng: A と B と どちらが Adj か → ~の ほうが Adj / どちらも Adj. A は B より Adj (chỉ câu khẳng định).',q:[
+'Từ nào tạo nghĩa "nhất"?|いちばん = nhất. とても nghĩa là "rất".',
+'|So sánh hai đối tượng thì hỏi bằng どちら.',
+'|A の ほうが = "bên A được thích hơn".',
+'Nói "Tôi thích cả hai" như thế nào?|どちらも = cả hai.',
+'|A は B より Adj = A Adj hơn B.']},
+{t:'もう & まだ',r:'もう V ましたか → はい、もう V ました / いいえ、まだです.',q:[
+'もう カレーを たべましたか。Trả lời "chưa":|"Chưa" = いいえ、まだです.',
+'もう trong もう ~ V ましたか nghĩa là gì?|もう + quá khứ hỏi "đã ~ chưa?".|đã, rồi|chưa|chắc chắn|rất',
+'まだ trong いいえ、まだです nghĩa là gì?|まだ = vẫn chưa.|chưa|đã, rồi|cùng nhau|nhiều',
+'|はい、もう V ました = "Vâng, tôi đã làm rồi".',
+'Câu nào hỏi "Bạn ăn chưa?"|もう + V ましたか (quá khứ) hỏi việc đã xảy ra chưa.']},
+{t:'あります / います & vị trí',r:'P に N が あります (đồ vật) / います (người, động vật). N は P に あります / います. Vị trí: うえ, した, なか, そと, となり, あいだ, まえ, うしろ.',q:[
+'|Sinh vật sống dùng います.',
+'|Đồ vật vô tri dùng あります.',
+'Câu nào hỏi "Ai ở đó?"|だれ (ai) đi với います cho người.',
+'なか nghĩa là gì?|なか = bên trong. そと là bên ngoài.|bên trong|bên ngoài|bên trên|bên cạnh',
+'Từ nào nghĩa là "bên cạnh"?|となり = bên cạnh. あいだ = ở giữa.']},
+{t:'V-かた, わかります & ～ましょうか',r:'V-gốc + かた = cách làm. N の V かた が わかります / わかりません. V ましょうか = "Để tôi ~ nhé?"; đáp: おねがいします / いいえ、だいじょうぶです.',q:[
+'Tạo "cách đọc" từ よみます:|Bỏ ます và thêm かた.',
+'|わかります / わかりません đánh dấu thứ được hiểu bằng が.',
+'|V ましょうか = "Để tôi ~ giúp nhé?"',
+'|おねがいします dùng để nhận lời đề nghị giúp.',
+'|Gốc động từ つくり + かた = cách làm.']},
+{t:'Thể て, ～ています & ～てください',r:'Nhóm 1: い・ち・り → って; み・に・び → んで; き → いて (いきます → いって); ぎ → いで; し → して. Nhóm 2 & 3: bỏ ます + て. V ています = đang V. V てください = xin hãy V.',q:[
+'Thể て của かいます?|Đuôi い・ち・り chuyển thành って.',
+'Thể て của のみます?|Đuôi み・に・び chuyển thành んで.',
+'Thể て của かきます?|き chuyển thành いて. ぎ chuyển thành いで.',
+'Thể て của いきます (bất quy tắc)?|いきます là ngoại lệ: いって, không phải いいて.',
+'|V て + ください = xin hãy V.']}
+];
+
+const GN=[
+{l:'Bài 4',t:['Phó từ chỉ mức độ & どうですか','Degree adverbs & どうですか'],r:['S は とても (rất) / すこし (hơi) Adj です; あまり (không ~ lắm) + Adj くないです / じゃありません. Hỏi: S は どうですか (tính từ) / どんな N ですか (Adj-i + N; Adj-na + な + N).','S は とても (very) / すこし (a little) Adj です; あまり (not very) + negative Adj. Ask: S は どうですか / どんな N ですか (Adj-i + N; Adj-na + な + N).'],q:[
+'この こうえんは＿＿ おおきいです。[rất / very]|とても|あまり|ぜんぜん|いちばん|とても đi với câu khẳng định.|とても = very, used with an affirmative adjective.',
+'ここは＿＿ しずかじゃありません。[không ~ lắm / not very]|あまり|とても|すこし|いちばん|あまり luôn đi với dạng phủ định.|あまり always goes with a negative.',
+'A: ベトナムの なつは どうですか。 B: ＿＿。|あついです|あつなです|あつくです|あついなです|どうですか được trả lời bằng Adj + です.|どうですか is answered with Adj + です.',
+'A: ベトナムは どんな くにですか。 B: ＿＿ くにです。|きれいな|きれい|きれいの|きれいで|どんな N → Adj-na + な + N.|どんな N ですか → Adj-na + な + N.']},
+{l:'Bài 4',t:['Vị trí trong nước & P に N が あります','Location in a country & P に N が あります'],r:['A は B の きた / まんなか / みなみ です. P に N が あります (P có N); hỏi: P に 何が ありますか. Cuối câu: ね = xác nhận, đồng tình; よ = báo tin mới, nhấn mạnh.','A は B の きた / まんなか / みなみ です. P に N が あります (P has N); ask P に 何が ありますか. Sentence-final ね = seeking agreement; よ = telling something new, emphasis.'],q:[
+'ほっかいどうは 日本の＿＿です。[bắc / north]|きた|みなみ|ひがし|まんなか|きた = bắc, みなみ = nam.|きた = north, みなみ = south.',
+'ながのは 日本の＿＿です。[trung tâm / centre]|まんなか|きた|みなみ|にし|まんなか = ở giữa, trung tâm.|まんなか = the middle.',
+'ブンタウに ＿＿が ありますか。[gì / what]|何|だれ|どこ|いつ|何 (なに) hỏi về vật.|何 (なに) asks about things.',
+'あしたは やすみです＿＿。[báo tin / telling]|よ|ね|か|を|よ báo tin mới hoặc nhấn mạnh; ね xin đồng tình.|よ announces new info; ね seeks agreement.']},
+{l:'Bài 7',t:['Dụng cụ で & おきます / いれます / だします','Tools で & おきます / いれます / だします'],r:['N (dụng cụ) で V ます: はしで たべます. Place に N を おきます / いれます; Place から N を だします; Place へ N を もって いきます / きます.','N (tool) で V: はしで たべます. Place に N を おきます / いれます; Place から N を だします; Place へ N を もって いきます / きます.'],q:[
+'ベトナムじんは はし＿＿ たべます。|で|を|に|と|で chỉ dụng cụ, cách thức.|で marks the tool or means.',
+'れいぞうこ＿＿ ぎゅうにくを いれます。|に|で|から|を|いれます → nơi đến dùng に.|いれます takes に for the destination.',
+'かばん＿＿ さいふを だします。|から|に|で|を|だします → lấy ra từ đâu thì dùng から.|だします takes から for the source.',
+'がっこうへ ほんを＿＿ いきます。[mang đi / take]|もって|もち|もつ|もちます|もって いきます dùng thể て.|もって いきます uses the て-form.']}
+];
+GN.forEach(n=>{GR.push({l:n.l,t:n.t[1],r:n.r[1],q:n.q.map(s=>{const a=s.split('|');return[a[0],a[1],a[2],a[3],a[4],a[6]].join('|')})});VI.push({t:n.t[0],r:n.r[0],q:n.q.map(s=>{const a=s.split('|');return'|'+a[5]})})});
+const tt=(i,k)=>pref.lang=='vi'?VI[i][k]:GR[i][k];
+const gq=g=>{const v=pref.lang=='vi'?VI[GR.indexOf(g)]:null;return g.q.map((s,i)=>{const a=s.split('|');let p=a[0],e=a[5],o=a.slice(1,5);if(v){const b=v.q[i].split('|');if(b[0])p=b[0];e=b[1];if(b[2])o=b.slice(2,6)}return{p,c:o[0],o,e}})};
+let Q=null,go=-1;
+const bt=k=>pref.gs[k]!=null?' · '+u('tốt nhất','best')+' '+pref.gs[k]+'%':'';
+function gram(){const ls=[...new Set(GR.map(g=>g.l))];
+ $().innerHTML=`<h1>JPD123 – ${u('Ngữ pháp','Grammar')}</h1><div class="mu">${u(`${GR.length} cấu trúc · mở từng mục để xem, rồi làm trắc nghiệm`,`${GR.length} patterns · open each one, then take the quiz`)}</div>${tabs()}`
+ +ls.map(l=>`<h2 style="margin:18px 0 6px">${ll(l)}</h2>`+GR.map((g,i)=>g.l==l?`<details ${i==go?'open':''}><summary><span>${tt(i,'t')}</span><span class="mu">${pref.gs['G'+i]!=null?pref.gs['G'+i]+'%':''}</span></summary><div class="gr"><p>${tt(i,'r')}</p><button class="p" onclick="gstart(${i})">${u('Làm','Do')} ${GR[i].q.length} ${u('câu','questions')}</button></div></details>`:'').join('')
+ +`<button class="p" style="width:100%;margin-top:6px;padding:14px" onclick="gtest('${l}')">📝 ${u('Kiểm tra','Test')} ${ll(l)}${bt('L'+l)}</button>`).join('')
+ +`<button class="p" style="width:100%;margin-top:26px;padding:16px" onclick="gall()">🏆 ${u('Kiểm tra toàn khóa (20 câu)','Full-course test (20 questions)')}${bt('ALL')}</button>`}
+function runQ(k,t,qs,re){Q={k,t,re,qs:shuf(qs),i:0,sc:0,pk:null,wr:[]};qz()}
+function gstart(i){go=i;runQ('G'+i,tt(i,'t'),gq(GR[i]),()=>gstart(i))}
+function gtest(l){runQ('L'+l,u('Kiểm tra ','Test ')+ll(l),GR.filter(g=>g.l==l).flatMap(gq),()=>gtest(l))}
+function gall(){runQ('ALL',u('Kiểm tra toàn khóa','Full-course test'),shuf(GR.flatMap(gq)).slice(0,20),gall)}
+function qz(){const n=Q.qs.length;
+ if(Q.i>=n){const pc=Math.round(Q.sc/n*100);if(pc>(pref.gs[Q.k]||0)){pref.gs[Q.k]=pc;save()}
+  $().innerHTML=`<div class="top"><button onclick="home()">${u('← Danh sách','← List')}</button><span class="mu">${Q.t}</span></div><div class="card" style="cursor:default;flex-direction:column;gap:10px">${pc>=80?'🎉':'💪'} ${Q.sc}/${n}<span class="mu" style="font-size:16px">${pc}%${bt(Q.k)}</span></div>`
+  +(Q.wr.length?`<div class="mu">${u('Các câu làm sai:','Questions you missed:')}</div><div class="list">${Q.wr.map(q=>`<div class="w" style="display:block"><div>${q.p}</div><div class="yes">✓ ${q.c}</div><div class="mu">${q.e}</div></div>`).join('')}</div>`:'')
+  +`<div class="act" style="margin-top:14px"><button onclick="Q.re()">${u('Làm lại','Retry')}</button><button class="p" onclick="home()">${u('Xong','Done')}</button></div>`;return}
+ const q=Q.qs[Q.i];q.s=q.s||shuf(q.o);const d=Q.pk!==null;
+ $().innerHTML=`<div class="top"><button onclick="home()">${u('← Thoát','← Exit')}</button><span class="mu">${Q.t} · ${Q.i+1}/${n}</span></div><div class="bar"><i style="width:${Q.i/n*100}%"></i></div><div class="q">${q.p}</div>`
+ +q.s.map((o,j)=>`<button class="op ${d?(o==q.c?'yes':j==Q.pk?'no':''):''}" onclick="qa(${j})">${o}</button>`).join('')
+ +(d?`<div class="fb ${q.s[Q.pk]==q.c?'yes':'no'}">${q.s[Q.pk]==q.c?(pref.lang=='vi'?'✓ Đúng':'✓ Correct'):(pref.lang=='vi'?'✗ Sai · đáp án: ':'✗ Incorrect · answer: ')+q.c}<div class="ex">${q.e}</div></div><button class="p" style="width:100%;margin-top:10px;padding:14px" onclick="Q.i++;Q.pk=null;qz()">${Q.i+1<n?u('Câu tiếp →','Next →'):u('Xem kết quả','See results')}</button>`:'')}
+function qa(j){if(Q.pk!==null)return;const q=Q.qs[Q.i];Q.pk=j;if(q.s[j]==q.c)Q.sc++;else Q.wr.push(q);qz()}
+const fs=()=>{const d=document,e=d.documentElement;try{d.fullscreenElement||d.webkitFullscreenElement?(d.exitFullscreen||d.webkitExitFullscreen).call(d):(e.requestFullscreen||e.webkitRequestFullscreen).call(e)}catch(x){}};
+const fsb=document.getElementById('fsb');
+if(!(document.documentElement.requestFullscreen||document.documentElement.webkitRequestFullscreen))fsb.hidden=true;
+['fullscreenchange','webkitfullscreenchange'].forEach(ev=>document.addEventListener(ev,()=>{fsb.textContent=(document.fullscreenElement||document.webkitFullscreenElement)?'✕':'⛶'}));
+let ZQ=null;const LET='ABCDE';
+const none=()=>u('Không có đáp án nào đúng','None of the above');
+const gz=q=>{const nn=Math.random()<.25;return{p:q.p,o:shuf(nn?q.o.filter(x=>x!=q.c):q.o),c:nn?null:q.c,ans:q.c,e:q.e}};
+const vq=()=>{const w=D[Math.random()*D.length|0],rev=Math.random()<.5,key=x=>rev?x.k:mn(x),c=key(w),seen=new Set([c]),ds=[];
+ for(const x of shuf(D.filter(x=>x.id!=w.id)).sort((a,b)=>(b.t==w.t)-(a.t==w.t))){const k=key(x);if(!seen.has(k)){seen.add(k);ds.push(k)}if(ds.length==5)break}
+ const nn=Math.random()<.25;
+ return{p:(rev?mn(w):w.k+(w.kj?' 【'+w.kj+'】':''))+`<div class="mu" style="font-size:14px">${rev?u('Từ tiếng Nhật nào có nghĩa này?','Which Japanese word matches?'):u('Nghĩa của từ này là gì?','What does this word mean?')}</div>`,o:nn?ds.slice(0,5):shuf([c,...ds.slice(0,4)]),c:nn?null:c,ans:c,e:w.k+' = '+mn(w)}};
+function zhome(){$().innerHTML=`<h1>JPD123 – ${u('Quiz tổng','Master quiz')}</h1><div class="mu">${u(`${D.length} từ · ${GR.flatMap(g=>g.q).length} câu ngữ pháp`,`${D.length} words · ${GR.flatMap(g=>g.q).length} grammar questions`)}</div>${tabs()}
+ <div class="zc"><h2>🃏 Flashcard</h2><p class="mu">${u('Lật thẻ toàn bộ từ vựng của môn học.','Flip through all course vocabulary.')}</p><button class="p" onclick="openSet(-1)">${u('Học flashcard toàn khóa','Study all flashcards')}</button></div>
+ <div class="zc"><h2>📝 ${u('Kiểm tra A–F','A–F test')}</h2><p class="mu">${u('Mỗi câu có đáp án A–E và F = “Không có đáp án nào đúng”. Khoảng 1/4 số câu đáp án đúng là F nên đừng lụi! Điểm tính theo thang 10.','Each question has A–E plus F = “None of the above”. About 1 in 4 questions has F as the answer, so no blind guessing! Scored out of 10.')}</p>
+ <div class="row">${[10,20,30,50].map(n=>`<button class="p" onclick="zstart(${n})">${n} ${u('câu','Qs')}</button>`).join('')}</div>${pref.zb!=null?`<p class="mu">${u('Điểm cao nhất','Best score')}: ${pref.zb}/10</p>`:''}</div>`}
+function zstart(n){const nv=Math.round(n*.7),g=shuf(GR.flatMap(gq)).slice(0,n-nv).map(gz);ZQ={qs:shuf([...g,...Array.from({length:n-g.length},vq)]),i:0,sc:0,pk:null,wr:[],n};zq()}
+const zok=q=>q.c==null?q.o.length:q.o.indexOf(q.c),zl=(q,j)=>j==q.o.length?'F':LET[j];
+function zq(){const z=ZQ,n=z.n;if(z.i>=n)return zend();const q=z.qs[z.i],d=z.pk!==null,ok=zok(q);
+ $().innerHTML=`<div class="top"><button onclick="home()">${u('← Thoát','← Exit')}</button><span class="mu">${u('Quiz tổng','Master quiz')} · ${z.i+1}/${n}</span>${lg()}</div><div class="bar"><i style="width:${z.i/n*100}%"></i></div><div class="q">${q.p}</div>`
+ +[...q.o,none()].map((o,j)=>`<button class="op ${d?(j==ok?'yes':j==z.pk?'no':''):''}" onclick="zans(${j})"><b>${zl(q,j)}.</b> ${o}</button>`).join('')
+ +(d?`<div class="fb ${z.pk==ok?'yes':'no'}">${z.pk==ok?u('✓ Đúng','✓ Correct'):u('✗ Sai · đáp án: ','✗ Incorrect · answer: ')+zl(q,ok)+(q.c==null?' ('+u('không có đáp án nào đúng','none of the above')+')':'')}<div class="ex">${q.c==null?u('Đáp án thật là: ','The real answer is: ')+q.ans+' — ':''}${q.e}</div></div><button class="p" style="width:100%;margin-top:10px;padding:14px" onclick="ZQ.i++;ZQ.pk=null;zq()">${z.i+1<n?u('Câu tiếp →','Next →'):u('Xem kết quả','See results')}</button>`:'')}
+function zans(j){const z=ZQ;if(z.pk!==null)return;const q=z.qs[z.i];z.pk=j;if(j==zok(q))z.sc++;else z.wr.push(q);zq()}
+const ZM=[['Anh bạn tày đấy','You are something else'],['Làm tốt, hẹn bạn kì sau','Nice try, see you next term'],['Ngấp ngoải vậy má, rớt ba mẹ thương em','Barely alive… fail, but your parents still love you'],['Tạm thôi ku em, học không ổn rớt môn đó','Meh, kid. Study like this and you fail'],['Làm tốt đấy','Well done'],['Điểm quá ngon','Excellent score'],['Bạn chưa tày đâu','You are not that good yet']];
+function zend(){const z=ZQ,n=z.n,s=Math.round(z.sc/n*100)/10;let b=Math.round(s);if(z.sc>0&&b==0)b=1;if(!z.sc)b=0;
+ const m=ZM[b==0?0:b<=4?1:b==5?2:b<=7?3:b==8?4:b==9?5:6];if(pref.zb==null||s>pref.zb){pref.zb=s;save()}
+ $().innerHTML=`<div class="top"><button onclick="home()">${u('← Quay lại','← Back')}</button>${lg()}</div><div class="card" style="cursor:default;flex-direction:column;gap:10px">${b>=8?'🎉':b>=5?'💪':'😅'} ${s}/10<span style="font-size:20px">${u(m[0],m[1])}</span><span class="mu" style="font-size:16px">${z.sc}/${n} ${u('câu đúng','correct')}</span></div>`
+ +(z.wr.length?`<div class="mu">${u('Các câu làm sai:','Questions you missed:')}</div><div class="list">${z.wr.map(q=>`<div class="w" style="display:block"><div>${q.p}</div><div class="yes">→ ${q.ans}</div><div class="mu" style="font-size:14px">${q.e}</div></div>`).join('')}</div>`:'')
+ +`<div class="act" style="margin-top:14px"><button onclick="zstart(${n})">${u('Làm lại','Retry')}</button><button class="p" onclick="home()">${u('Xong','Done')}</button></div>`}
+/* ===== Speaking ===== */
+const SPK=[[1, 0, "こんにちは！私はさとうです。おおさか大学のせんせいです。私のたんじょうびは4がつ5日です。しゅみはサッカーです。まいにちサッカーをします。ときどきこうえんにいって、ともだちといっしょにサッカーをします。しごとはいそがしいですが、たのしいです。"], [2, 0, "おはようございます！こちらはリーさんです。リーさんはちゅうごく人です。かれのしゅみはおんがくです。 今、京都たんき大学の学生です。学校で日本語をべんきょうしています。ひまなときにはともだちとカラオケにいきます。"], [3, 3, "日曜日、ともだちとちかくの山にのぼりました。てんきがよかったですから、とてもきもちがよかったです。山でおべんとうを食べました。山からのけしきはとてもきれいでした。それから、古いお寺を見に行きました。とてもおもしろかったです。とてもたのしい1日でした。また行きたいです。"], [4, 1, "わたしのまちはしずかです。ふるいおてらがおおいです。きれいなかわがあります。たかいやまもあります。しずかです。ここはちいさいですが、いいです。"], [5, 2, "私はベトナムのダナンからきました。ダナンはベトナムのまんなかです。ダナンはちいさいですが、とてもにぎやかなところです。ふるいお寺やびじゅつかんなどがあります。お寺はとてもきれいです。8月に花火のまつりがあります。いろいろな国の花火があります。とてもきれいです。ダナンはなつ、あついです。そして、あめがおおいです。ダナンはいいところです。みなさん、ぜひきてください。"], [6, 2, "パクさんは かんこくじんです。今年 は 21才です。さくら 日本語 学校の 学生です。うちは かんこくのソウルです。ソウルは かんこくの にしです。東京から ソウルまでひこうき で 2時間 ぐらいです。ソウルは にぎやかです。そして おおきいまちです。ソウルは 12月、さむいです。ゆきが おおいです。ふゆになったら トッポッキ をたべます。とてもおいしいですが、からいです。"], [7, 2, "日曜日、ともだちと ちかくのやまにのぼりました。てんきがよかったですから、とてもきもちがよかったです。やまで、おべんとうをたべました。やまからの けしきがとてもきれいでした。それから、ふるいお寺を見に行きました。とてもおもしろかったです。とてもたのしい1日でした。また行きたいです。"], [8, 2, "私はメアリです。私は イタリアのフィレンツェから来ました。フィレンツェはイタリアのすこし きたです。フィレンツェは とても にぎやかなところです。ふるいきょうかいやびじゅつかんなどがあります。きょうかいはとてもきれいです。2月にチョコレートのまつりがあります。いろいろな チョコレートがあります。とてもおいしいです。フィレンツェははる、あたたかいです。そして、雨がすくないです。フィレンツェは いいところです。"], [9, 2, "すみません、ちょっときいてください。あそこにとけいがみえますか。ええ、みえます。あれは私のとけいです。でも、今は時間がわかりません。とけいがこわれています。新しいとけいを買いに行きます。"], [10, 4, "今日は雨ですが、うちで本を読みます。きのうはいいてんきでした。きのうはこうえんでテニスをしました。テニスはとてもたのしかったです。あしたはともだちとえいがを見ます。おもしろいえいががいいです。来週は日本へ行きます。日本の食べ物はおいしいです。すしがだいすきです。すしはせかいでいちばんおいしいです。日本では、たくさんのすしをたべたいです。それから、京都にもいきたいです。京都は日本の古いまちです。きれいなまちだとおもいます。日本りょこうがたのしみです。"], [11, 5, "私はミンです。ベトナムのハノイから 来ました。ハノイはベトナムのきたです。とても しずかな ところです。ふるい お寺や びじゅつかん などが あります。お寺は とてもきれいです。ハノイは ふゆ、すこし さむいです。あめが あまり おおくないです。ハノイは いいところです。"], [12, 5, "私は パクです。私の まちは かんこくのソウルです。ソウルは おおきい まちです。そして、いい ところです。ソウルに おおきい かわが あります。かわは とても きれいです。ソウルは ふゆ、とても さむいです。みなさん、かんこくへ来てください。"], [13, 5, "メアリーさんは イタリア人です。38才です。さくら 学校の 先生です。うちは イタリアの ナポリです。ナポリは イタリアの みなみです。東京から ローマまで ひこうきで 12時間半くらいです。ローマから ナポリまで バスで 3時間です。ナポリは とても きれいです。そして しずかです。 てんきが いいです。"], [14, 5, "私のまちは きれいです。ふるいお寺 や びじゅつかん などが あります。なつに メロンの ジュースを のみます。 すこし あまいですが、とても おいしいです。そして つめたいです。食べ物もおいしいです。皆さん、ぜひ、来てください。"], [15, 5, "しゅうまつ、てんきが よかったです。私は こうえんへ いきました。ともだちに 会いました。さくらを 見ました。きれいでした。それから、インドの レストランで 食事しました。とても おいしかったです。よる、デパートへ 行きました。何も 買いませんでした。たかかったですから。たのしい 一日 でした。"], [16, 5, "先週の日よう日、ともだちとやまにのぼりました。てんきがよかったですから、とてもきもちがよかったです。やまでおべんとうを食べました。 ここの けしきは とてもきれいでした。それから、ふるいきょうかいを見に行きました。とてもおもしろかったです。とてもたのしい一日でした。また行きたいです。"], [17, 5, "先週の土曜日、私はこうえんでバーベキューをしました。それから、たかいやまにのぼりました。ここのけしきはとてもきれいでした。とてもおもしろかったです。とてもたのしい一日でした。また 行きたいです。"], [18, 5, "土曜日、ともだちと うみへ 行きました。 てんきが よかったですから、とても きもちが よかったです。 うみで ビールを 飲みました。バーベキューを しました。けしきは とても きれいでした。 それから、ふるい きょうかいを見に 行きました。とても おもしろかったです。 たのしい 1日でした。 また 行きたいです。"], [19, 5, "私は スポーツが すきです。テニスと すいえいを します。サッカーは しません。にちようび かぞくと テニスを します。とても たのしいです。それから、プールへ いきます。まいにち テニスと すいえいを したいです。"], [20, 5, "日曜日 ともだち のうちへ 行きました。そこで ゲームを しました。コーヒーを 飲みました。とても たのしかったです。それから、日本の レストランで 食事しました。とても おいしかったですが、たかかったです。よる、デパートへ 買い物に 行きました。 デパートで ともだちと しゃしんを とりました。"], [21, 5, "私は スポーツが すきです。テニスと すいえいを します。サッカーは しません。 テニスは 土曜日に かぞくと します。そして ときどき プールに 行きます。かわで およぎます。私は 今 とても たのしいです。げんきです。 テニスと すいえいを したいです。"], [22, 5, "今週の土曜日の午後はいそがしいですか。 わたしの国の たいしかんで パーティーがあります。 いっしょに行きませんか。 木曜日の あさまでに へんじをください。"], [23, 5, "みなさんは 日本の 食べ物で 何が いちばん すきですか。 私は おこのみやきが いちばん すきです。 おこのみやきは 日本のピザです。 おこのみやきの なかに ぶたにく や たまご や やさいが あります。 おこのみやきの ソースは すこし あまいです。 とても おいしいですよ。 こんど いっしょに おこのみやきを 食べに 行きませんか。"], [24, 5, "私は あさ 時間が ありません。えきで パンを 買って 食べます。ひるごはんも しごとが いそがしいですから、 パンと ぎゅうにゅうです。ばんごはんは、うちのちかくの レストランで ゆっくり ごはんを 食べます。"], [25, 5, "メアリーさんは 会社いんです。 東京に います。毎日、7時に おきます。8時に 会社へ 行きます。午後5時まで しごとを します。よる 9時ごろ うちへ 帰ります。ばんごはんを 食べます。テレビを 見ます。それから、インターネットをして、でんわで こいびとと 話します。11時ごろ ねます。"], [26, 5, "私は ダニエルです。かぞくは 4人です。あに は 会社いんです。ちちは 大学で おしえています。はは は びょういんで はたらいています。私は ひろしま 大学の1年生です。"], [27, 5, "きのうの あさ 私は 一人で としょかんへ 行きました。それから、スーパーで 買いものを しました。午後、ともだちの すずきさんに 会いました。ゆうがた、うちへ 帰りました。そして、えいごを べんきょうしました。"], [28, 5, "みなさん、来週の日曜日、私のうちで パーティーをします。私は国の 料理を つくります。 いっしょに つくりませんか。 それから、みなさんの国の 料理を つくって、いっしょに 食べましょう。おいしい おさけも 飲みましょう。 私のアパートは えきの ちかくに あります。 コンビニの となりの あたらしい アパートです。 ぜひ、来てください。"], [29, 5, "きのう、キムさんと デパートで 買いものを しました。 4かいへ 行きました。シャツを 見ました。ふくやに シャツが たくさん ありました。キムさんは 小さいシャツを 買いました。私は 大きいシャツを 買いました。それから、時間が ありましたから、1かいで えいがを 見ました。帰りました。"], [30, 5, "田中さんの おとうさんは ごはんと みそしるが すきです。パンは あまり すきじゃありません。 田中さんの おかあさんも ごはんと みそしるが すきです。パンも よく 食べます。おかあさんは たまごは あまり 食べません。 田中さんは いつも ごはんと 肉を 食べます。貝も すきです。パンは あまり 食べません。 くだものも すきじゃありません。"], [31, 5, "私は 大学のとき、日本の えいがを フランス語で 見ました。とても、おもしろかったです。 日本の おもしろいことを たくさん 見たいですから、 日本へ来ました。今、日本語を べんきょうしています。"], [32, 5, "私は ベトナムのハノイから きました。ハノイは ベトナムのきたです。とても きれいです。ふるいお寺や びじゅつかんが あります。おいしい食べ物が おおいです。なつ、てんきが いいです。そして、あめが すくないです。こうえんで バーベキューをします。ハノイは いいところです。なつやすみ、ハノイへ帰りたいです。"], [33, 5, "しゅうまつ、ひまでした。私は ともだちと えいがを 見に行きました。おもしろいえいがでした。それから、ちゅうごくのレストランで ひるごはんを 食べました。おいしかったです。レストランで 大学の先生に 会いました。先生は かぞくと ごはんを 食べました。よる、へやを そうじしました。それから、せんたくしました。"], [34, 5, "私のまちは にぎやかです。たかい ビルがおおいです。きょうかいも あります。とても きれいです。まちは はる、すずしいです。おはなみに行きます。あきにおまつりを見ます。とても おもしろいです。みなさん、ぜひ来てください。"], [35, 5, "今日 小学校の後ろで 田中先生に 会いました。本田さんも来ました。お寺の見学について たくさん話しました。それから、5時半に 帰りました。 野菜をきって、料理をつくって、一人で 食べました。"]];
+const SPD=[['Cực kì dễ','Very easy'],['Dễ','Easy'],['Trung bình','Medium'],['Khó','Hard'],['Siêu khó – Cảnh giới tu tiên','Insane'],['Chưa xếp loại','Unrated']];
+const SPT=20000;let SPS=null,spTm=null,spLast=-1;
+pref.sp=pref.sp||{};pref.spm=pref.spm||'t';pref.spf=pref.spf||[];if(pref.spc==null)pref.spc=1;if(pref.spr==null)pref.spr=1;
+const spf=ms=>{const s=ms/1000;return s>=60?Math.floor(s/60)+':'+(s%60).toFixed(1).padStart(4,'0'):s.toFixed(1)+' s'};
+const ROM={1:"こんにちは/konnichiwa|！/|私は/watashi wa|さとうです/satō desu|。/|おおさか/Ōsaka|大学の/daigaku no|せんせいです/sensei desu|。/|私の/watashi no|たんじょうびは/tanjōbi wa|4がつ5日です/shigatsu itsuka desu|。/|しゅみは/shumi wa|サッカーです/sakkā desu|。/|まいにち/mainichi|サッカーを/sakkā o|します/shimasu|。/|ときどき/tokidoki|こうえんに/kōen ni|いって/itte|、/|ともだちと/tomodachi to|いっしょに/issho ni|サッカーを/sakkā o|します/shimasu|。/|しごとは/shigoto wa|いそがしいですが/isogashii desu ga|、/|たのしいです/tanoshii desu|。/",2:"おはようございます/ohayō gozaimasu|！/|こちらは/kochira wa|リーさんです/Rī-san desu|。/|リーさんは/Rī-san wa|ちゅうごく人です/chūgokujin desu|。/|かれの/kare no|しゅみは/shumi wa|おんがくです/ongaku desu|。/| 今/ima|、/|京都/Kyōto|たんき大学の/tanki daigaku no|学生です/gakusei desu|。/|学校で/gakkō de|日本語を/nihongo o|べんきょうしています/benkyō shite imasu|。/|ひまなときには/hima na toki ni wa|ともだちと/tomodachi to|カラオケに/karaoke ni|いきます/ikimasu|。/",3:"日曜日/nichiyōbi|、/|ともだちと/tomodachi to|ちかくの/chikaku no|山に/yama ni|のぼりました/noborimashita|。/|てんきが/tenki ga|よかったですから/yokatta desu kara|、/|とても/totemo|きもちが/kimochi ga|よかったです/yokatta desu|。/|山で/yama de|おべんとうを/obentō o|食べました/tabemashita|。/|山からの/yama kara no|けしきは/keshiki wa|とても/totemo|きれいでした/kirei deshita|。/|それから/sorekara|、/|古い/furui|お寺を/otera o|見に/mi ni|行きました/ikimashita|。/|とても/totemo|おもしろかったです/omoshirokatta desu|。/|とても/totemo|たのしい/tanoshii|1日でした/ichinichi deshita|。/|また/mata|行きたいです/ikitai desu|。/",4:"わたしの/watashi no|まちは/machi wa|しずかです/shizuka desu|。/|ふるい/furui|おてらが/otera ga|おおいです/ōi desu|。/|きれいな/kirei na|かわが/kawa ga|あります/arimasu|。/|たかい/takai|やまも/yama mo|あります/arimasu|。/|しずかです/shizuka desu|。/|ここは/koko wa|ちいさいですが/chiisai desu ga|、/|いいです/ii desu|。/",7:"日曜日/nichiyōbi|、/|ともだちと /tomodachi to|ちかくの/chikaku no|やまに/yama ni|のぼりました/noborimashita|。/|てんきが/tenki ga|よかったですから/yokatta desu kara|、/|とても/totemo|きもちが/kimochi ga|よかったです/yokatta desu|。/|やまで/yama de|、/|おべんとうを/obentō o|たべました/tabemashita|。/|やまからの /yama kara no|けしきが/keshiki ga|とても/totemo|きれいでした/kirei deshita|。/|それから/sorekara|、/|ふるい/furui|お寺を/otera o|見に/mi ni|行きました/ikimashita|。/|とても/totemo|おもしろかったです/omoshirokatta desu|。/|とても/totemo|たのしい/tanoshii|1日でした/ichinichi deshita|。/|また/mata|行きたいです/ikitai desu|。/",9:"すみません/sumimasen|、/|ちょっと/chotto|きいてください/kiite kudasai|。/|あそこに/asoko ni|とけいが/tokei ga|みえますか/miemasu ka|。/|ええ/ē|、/|みえます/miemasu|。/|あれは/are wa|私の/watashi no|とけいです/tokei desu|。/|でも/demo|、/|今は/ima wa|時間が/jikan ga|わかりません/wakarimasen|。/|とけいが/tokei ga|こわれています/kowarete imasu|。/|新しい/atarashii|とけいを/tokei o|買いに/kai ni|行きます/ikimasu|。/"};
+const spl=k=>u(SPD[k][0].split(' –')[0],SPD[k][1]);
+function spSeg(i){const p=SPK[i],r=ROM[p[0]];if(r)return r.split('|').map(s=>{const k=s.indexOf('/');return [s.slice(0,k),s.slice(k+1)]});return (p[2].match(/[^。！？]*[。！？]?/g)||[]).filter(Boolean).map(s=>[s,null])}
+function spClr(){if(spTm){clearInterval(spTm);spTm=null}}
+function spStop(){spClr();SPS=null}
+function spList(){const f=pref.spf;return SPK.map((p,i)=>i).filter(i=>!f.length||f.includes(SPK[i][1]))}
+function spgo(i){spLast=i;pref.spm=='p'?spprac(i):spstart(i)}
+function spnext(){const l=spList();if(!l.length)return shome();const c=SPS?SPS.i:spLast,n=l.find(i=>i>c);spgo(n==null?l[0]:n)}
+function sprand(){const l=spList();if(!l.length)return;const c=SPS?SPS.i:spLast;let q=l.filter(i=>i!=c);if(!q.length)q=l;spgo(q[Math.floor(Math.random()*q.length)])}
+function spsetm(m){pref.spm=m;save();shome()}
+function spfl(k){if(k<0)pref.spf=[];else{const a=pref.spf,j=a.indexOf(k);j<0?a.push(k):a.splice(j,1);if(a.length>=SPD.length)pref.spf=[]}save();shome()}
+function spclock(v){pref.spc=v?1:0;save()}
+function sprom(v){pref.spr=v?1:0;save();const x=document.getElementById('sptxt');if(x)x.classList.toggle('nr',!v)}
+function shome(){spStop();const P=pref.spm=='p',l=spList();
+ $().innerHTML=`<h1>JPD123 – Speaking</h1><div class="mu">${P?u(`${SPK.length} bài · đọc to, rê chuột hoặc chạm từng cụm để xem romaji (không tính thời gian)`,`${SPK.length} passages · read aloud, hover or tap each chunk to see romaji (untimed)`):u(`${SPK.length} bài · xem bài ${SPT/1000} giây → bài bị ẩn → đọc to và bấm Space khi xong để đo thời gian`,`${SPK.length} passages · preview ${SPT/1000}s → text hides → read aloud, press Space when done to time it`)}</div>${tabs()}
+ <div class="row" style="margin:8px 0"><button class="${P?'':'on'}" onclick="spsetm('t')">⏱ ${u('Đo thời gian','Timed')}</button><button class="${P?'on':''}" onclick="spsetm('p')">📖 ${u('Luyện đọc','Practice')}</button></div>
+ <div class="row" style="margin:8px 0;flex-wrap:wrap"><button class="${pref.spf.length?'':'on'}" onclick="spfl(-1)">${u('Tất cả','All')}</button>${SPD.map((d,k)=>`<button class="${pref.spf.includes(k)?'on':''}" onclick="spfl(${k})">${spl(k)}</button>`).join('')}</div>
+ <div class="row" style="margin:8px 0;align-items:center"><button class="p" onclick="sprand()" ${l.length?'':'disabled'}>🎲 ${u('Bài ngẫu nhiên','Random lesson')}</button>${P?'':`<label class="mu"><input type="checkbox" ${pref.spc?'checked':''} onchange="spclock(this.checked)"> ${u('Hiện đồng hồ khi đọc','Show clock while reading')}</label>`}</div>
+ ${l.length?l.map(i=>{const p=SPK[i],r=pref.sp[p[0]];return `<button class="sp-item" onclick="spgo(${i})"><span><b>${u('Bài','Lesson')} ${p[0]}</b> <small>${spl(p[1])}</small></span><small>${!P&&r?'⏱ '+spf(r.last)+' · '+u('nhanh nhất','best')+' '+spf(r.best):''}</small></button>`}).join(''):`<div class="mu">${u('Không có bài nào trong bộ lọc này.','No lessons match this filter.')}</div>`}`}
+function spstart(i){spStop();SPS={i,ph:'pre',end:performance.now()+SPT};sprender();
+ spTm=setInterval(()=>{if(!SPS||SPS.ph!='pre')return;const l=SPS.end-performance.now();if(l<=0){spend();return}
+  const a=document.getElementById('spcd'),b=document.getElementById('spbar');if(a)a.textContent=Math.ceil(l/1000);if(b)b.style.width=(l/SPT*100)+'%'},100)}
+function spprac(i){spStop();SPS={i,ph:'prac',pins:new Set(),all:false};sprender()}
+function spend(){spClr();if(SPS&&SPS.ph=='pre'){SPS.ph='hid';sprender()}}
+function spreveal(){if(!SPS||SPS.ph!='hid')return;SPS.ph='read';SPS.t0=performance.now();sprender();spClr();
+ if(pref.spc)spTm=setInterval(()=>{const e=document.getElementById('spclk');if(e&&SPS&&SPS.ph=='read')e.textContent=spf(performance.now()-SPS.t0)},100)}
+function spdone(){if(!SPS||SPS.ph!='read')return;const ms=performance.now()-SPS.t0,id=SPK[SPS.i][0],r=pref.sp[id];spClr();SPS.ms=ms;SPS.prev=r?r.best:null;
+ pref.sp[id]={last:ms,best:r?Math.min(r.best,ms):ms};save();SPS.ph='done';sprender()}
+function spHTML(i,ro){const sg=spSeg(i),pn=SPS&&SPS.pins;
+ return `<div class="sp-txt${ro?' ro':''}${!ro&&SPS&&SPS.all?' all':''}${ro&&!pref.spr?' nr':''}" id="sptxt">`+sg.map((s,k)=>{const t=s[0].trim(),m=s[1],on=!ro&&pn&&pn.has(k);
+  return m?`<span class="rk t${on?' pin':''}"${ro?'':` tabindex="0" role="button" aria-pressed="${on}" data-k="${k}" onclick="sptog(this)" onkeydown="spkd(event,this)"`}><span class="jp">${t}</span><span class="rm">${m}</span></span>`:`<span class="rk"><span class="jp">${t}</span><span class="rm">&nbsp;</span></span>`}).join('')+'</div>'}
+function sptog(el){const k=+el.dataset.k,p=SPS.pins,on=!p.has(k);on?p.add(k):p.delete(k);el.classList.toggle('pin',on);el.setAttribute('aria-pressed',on)}
+function spkd(e,el){if(e.key=='Enter'||e.key==' '){e.preventDefault();sptog(el)}}
+const spAllL=()=>SPS.all?u('Che tất cả','Hide all'):u('Hiện tất cả','Show all');
+function spall(){SPS.all=!SPS.all;const x=document.getElementById('sptxt'),b=document.getElementById('spallb');if(x)x.classList.toggle('all',SPS.all);if(b)b.textContent=spAllL()}
+function sprender(){if(!SPS)return;const p=SPK[SPS.i],h=`<div class="top"><button onclick="shome()">${u('← Thoát','← Exit')}</button><span class="mu">${u('Bài','Lesson')} ${p[0]} · ${spl(p[1])}</span>${lg()}</div>`,no=ROM[p[0]]?'':`<div class="mu" style="text-align:center">${u('Bài này chưa có dữ liệu romaji.','This lesson has no romaji data yet.')}</div>`;
+ if(SPS.ph=='pre'){const l=Math.max(0,SPS.end-performance.now());
+  $().innerHTML=h+`<div class="sp-cd" id="spcd">${Math.ceil(l/1000)}</div><div class="bar"><i id="spbar" style="width:${l/SPT*100}%;background:var(--ac)"></i></div><div class="sp-card">${p[2]}</div><div class="mu" style="text-align:center">${u('Đọc thầm trong 20 giây — hết giờ bài sẽ bị ẩn.','Read silently for 20 seconds — the text hides when time is up.')}</div><div class="act" style="margin-top:14px"><button onclick="spend()">${u('Ẩn bài ngay (Space)','Hide now (Space)')}</button></div>`}
+ else if(SPS.ph=='hid'){
+  $().innerHTML=h+`<div class="sp-card hid">${u('Bài đã được ẩn.','The text is hidden.')}</div><div class="act"><button class="p" onclick="spreveal()">▶ ${u('Mở bài & bắt đầu đọc (Space)','Show text & start reading (Space)')}</button></div><div class="mu" style="text-align:center;margin-top:10px">${u('Bấm khi bạn sẵn sàng. Đồng hồ bắt đầu chạy ngay khi bài hiện ra.','Press when ready. The timer starts the moment the text appears.')}</div>`}
+ else if(SPS.ph=='read'){
+  $().innerHTML=h+`<div class="mu" style="text-align:center"><span class="sp-rec"></span>${u('Đang đọc…','Reading…')}</div>${pref.spc?`<div class="sp-cd" id="spclk">0.0 s</div>`:''}<div class="sp-card">${p[2]}</div><div class="act"><button class="p" onclick="spdone()">⏹ ${u('Đọc xong — Dừng (Space)','Finished — Stop (Space)')}</button></div>`}
+ else if(SPS.ph=='prac'){
+  $().innerHTML=h+no+`<div class="sp-card" style="min-height:0">${spHTML(SPS.i,0)}</div><div class="mu" style="text-align:center">${u('Rê chuột hoặc chạm vào cụm từ để xem romaji · bấm để ghim · Tab + Enter/Space trên bàn phím','Hover or tap a chunk to see its romaji · click to pin · Tab + Enter/Space on keyboard')}</div><div class="act" style="margin-top:14px"><button id="spallb" onclick="spall()">${spAllL()}</button><button onclick="spnext()">${u('Bài tiếp →','Next →')}</button><button class="p" onclick="sprand()">🎲 ${u('Bài ngẫu nhiên','Random lesson')}</button></div>`}
+ else{const n=p[2].replace(/\s/g,'').length,pb=SPS.prev==null||SPS.ms<SPS.prev;
+  $().innerHTML=h+`<div class="card" style="cursor:default;flex-direction:column;gap:8px;min-height:200px"><span class="mu" style="font-size:16px">${u('Thời gian đọc của bạn','Your reading time')}</span><span class="sp-big">${spf(SPS.ms)}</span><span class="mu" style="font-size:16px">${n} ${u('ký tự','characters')} · ${(n/(SPS.ms/1000)).toFixed(1)} ${u('ký tự/giây','chars/sec')}</span>${pb?`<span style="font-size:18px">🎉 ${SPS.prev==null?u('Lần đo đầu tiên','First time recorded'):u('Kỷ lục mới!','New best!')}</span>`:`<span class="mu" style="font-size:16px">${u('Nhanh nhất','Best')}: ${spf(SPS.prev)}</span>`}</div>${no}<label class="mu" style="display:block;margin:8px 0"><input type="checkbox" ${pref.spr?'checked':''} onchange="sprom(this.checked)"> ${u('Hiện romaji','Show romaji')}</label><div class="sp-card" style="min-height:0">${spHTML(SPS.i,1)}</div><div class="act"><button onclick="spstart(SPS.i)">${u('Làm lại','Retry')}</button><button onclick="spnext()">${u('Bài tiếp →','Next →')}</button><button onclick="sprand()">🎲 ${u('Bài ngẫu nhiên','Random lesson')}</button><button class="p" onclick="shome()">${u('Danh sách','List')}</button></div>`}}
+document.addEventListener('keydown',e=>{if(!SPS||SPS.ph=='prac'||e.code!='Space'||e.metaKey||e.ctrlKey||e.altKey)return;e.preventDefault();if(e.repeat)return;if(document.activeElement&&document.activeElement.blur)document.activeElement.blur();
+ if(SPS.ph=='pre')spend();else if(SPS.ph=='hid')spreveal();else if(SPS.ph=='read')spdone()});
+document.addEventListener('keyup',e=>{if(SPS&&e.code=='Space')e.preventDefault()});
+
+home();
+</script></body></html>
