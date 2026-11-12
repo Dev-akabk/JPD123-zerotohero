@@ -24,7 +24,7 @@
 * **Ngữ pháp (Grammar):** Tổng hợp cấu trúc ngữ pháp chi tiết kèm phần trắc nghiệm luyện tập theo từng bài và bài test toàn khóa.
 * **Quiz tổng (Master quiz):** Hệ thống câu hỏi trắc nghiệm đa dạng (có cả đáp án đánh lừa dạng A–E và F) giúp củng cố kiến thức tối đa.
 * **Luyện đọc / Speaking:** Hỗ trợ tính năng đếm giờ, ẩn/hiện Romaji linh hoạt để luyện đọc trôi chảy.
-* **Tùy chỉnh giao diện:** Hỗ trợ Chế độ Sáng/Tối (Dark/Light mode), thay đổi phông chữ (Gothic, Mincho, System) và điều chỉnh cỡ chữ dễ dàng.
+* **Tùy chỉnh giao diện:** Hỗ trợ nhiều chế độ màu khác nhau, thay đổi phông chữ (Gothic, Mincho, System) và điều chỉnh cỡ chữ dễ dàng.
 * **Đa ngôn ngữ:** Hỗ trợ chuyển đổi mượt mà giữa tiếng Việt và tiếng Anh.
 
 ---
@@ -48,4 +48,4 @@
 
 ---
 
-<p align="center">Made with code and coffee by <b>Quang Lê</b> (FPT University SE204789)</p>
+<p align="center">Made with code and coffee by <b>Quang Tèo</b></p>
