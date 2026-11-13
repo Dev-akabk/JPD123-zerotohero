@@ -53,16 +53,16 @@ Xong ấn vô dùng thôi
 <p>📊 <b>Thống kê truy cập & Tương tác</b></p>
 
 <!-- Biểu đồ thống kê lượt truy cập chi tiết hơn từ Wakatime/GitHub Stats -->
-<a href="https://github.com/YOUR_GITHUB_USERNAME/JPD123-zerotohero">
-  <img src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=radical&hide_border=true" alt="GitHub Stats" />
+<a href="https://github.com/Dev-akabk/JPD123-zerotohero">
+  <img src="https://github-readme-stats.vercel.app/api?username=Dev-akabk&show_icons=true&theme=radical&hide_border=true" alt="GitHub Stats" />
 </a>
 
 <br><br>
 
 <!-- Các huy hiệu theo yêu cầu chuyển xuống dưới cùng -->
-[![GitHub repo size](https://img.shields.io/github/repo-size/YOUR_GITHUB_USERNAME/JPD123-zerotohero?style=flat-square&color=blue)](https://github.com/YOUR_GITHUB_USERNAME/JPD123-zerotohero)
-[![GitHub stars](https://img.shields.io/github/stars/YOUR_GITHUB_USERNAME/JPD123-zerotohero?style=social)](https://github.com/YOUR_GITHUB_USERNAME/JPD123-zerotohero/stargazers)
-[![Visitor Count](https://komarev.com/ghpvc/?username=YOUR_GITHUB_USERNAME&color=brightgreen&style=flat-square)](https://github.com/YOUR_GITHUB_USERNAME/JPD123-zerotohero)
+[![GitHub repo size](https://img.shields.io/github/repo-size/Dev-akabk/JPD123-zerotohero?style=flat-square&color=blue)](https://github.com/Dev-akabk/JPD123-zerotohero)
+[![GitHub stars](https://img.shields.io/github/stars/Dev-akabk/JPD123-zerotohero?style=social)](https://github.com/Dev-akabk/JPD123-zerotohero/stargazers)
+[![Visitor Count](https://komarev.com/ghpvc/?username=Dev-akabk&color=brightgreen&style=flat-square)](https://github.com/Dev-akabk/JPD123-zerotohero)
 
 <br><br>
 Made with code and coffee by <b>Quang Tèo</b>
