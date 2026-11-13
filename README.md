@@ -54,7 +54,7 @@ Xong ấn vô dùng thôi
 
 <!-- Biểu đồ thống kê lượt truy cập chi tiết hơn từ Wakatime/GitHub Stats -->
 <a href="https://github.com/Dev-akabk/JPD123-zerotohero">
-  <img src="https://github-readme-stats.vercel.app/api?username=Dev-akabk&show_icons=true&theme=radical&hide_border=true" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Dev-akabk&repo=JPD123-zerotohero&show_icons=true&theme=radical&hide_border=true" alt="GitHub Stats" />
 </a>
 
 <br><br>
