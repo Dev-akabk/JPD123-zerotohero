@@ -50,16 +50,16 @@ Xong ấn vô dùng thôi
 
 <div align="center">
 
-<p>📊 <b>Thống kê truy cập & Tương tác</b></p>
+<p>📊 <b>Thống kê repository</b></p>
 
-<!-- Biểu đồ thống kê lượt truy cập chi tiết hơn từ Wakatime/GitHub Stats -->
+<!-- Sử dụng ảnh thống kê chính chủ từ GitHub chuẩn xác 100% -->
 <a href="https://github.com/Dev-akabk/JPD123-zerotohero">
-  <img src="https://github-readme-stats.vercel.app/api?username=Dev-akabk&repo=JPD123-zerotohero&show_icons=true&theme=radical&hide_border=true" alt="GitHub Stats" />
+  <img src="https://repobeats.axiom.co/api/embed/e29a349bcba74720977464e50882e3c0490b3967.svg" alt="Repobeats analytics image" />
 </a>
 
 <br><br>
 
-<!-- Các huy hiệu theo yêu cầu chuyển xuống dưới cùng -->
+<!-- Các huy hiệu repo -->
 [![GitHub repo size](https://img.shields.io/github/repo-size/Dev-akabk/JPD123-zerotohero?style=flat-square&color=blue)](https://github.com/Dev-akabk/JPD123-zerotohero)
 [![GitHub stars](https://img.shields.io/github/stars/Dev-akabk/JPD123-zerotohero?style=social)](https://github.com/Dev-akabk/JPD123-zerotohero/stargazers)
 [![Visitor Count](https://komarev.com/ghpvc/?username=Dev-akabk&color=brightgreen&style=flat-square)](https://github.com/Dev-akabk/JPD123-zerotohero)
