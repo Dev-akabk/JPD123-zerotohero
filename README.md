@@ -50,15 +50,9 @@ Xong ấn vô dùng thôi
 
 <div align="center">
 
-<p>📊 <b>Thống kê repository</b></p>
+  <p><b>Repository Statistic</b></p>
 
-<div align="center">
-
-<p><b>Repository Statistic</b></p>
-
-<a href="https://github.com/Dev-akabk/JPD123-zerotohero">
-<img src="https://repobeats.axiom.co/api/embed/e29a349bcba74720977464e50882e3c0490b3967.svg" alt="Repobeats analytics image" />
-</a>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dev-akabk&layout=compact&theme=radical&hide_border=true" alt="Top Languages" />
 
 </div>
 
