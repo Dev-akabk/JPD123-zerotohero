@@ -52,14 +52,18 @@ Xong ấn vô dùng thôi
 
 <p>📊 <b>Thống kê repository</b></p>
 
-<!-- Sử dụng ảnh thống kê chính chủ từ GitHub chuẩn xác 100% -->
+<div align="center">
+
+<p><b>Repository Statistic</b></p>
+
 <a href="https://github.com/Dev-akabk/JPD123-zerotohero">
-  <img src="https://repobeats.axiom.co/api/embed/e29a349bcba74720977464e50882e3c0490b3967.svg" alt="Repobeats analytics image" />
+<img src="https://repobeats.axiom.co/api/embed/e29a349bcba74720977464e50882e3c0490b3967.svg" alt="Repobeats analytics image" />
 </a>
+
+</div>
 
 <br><br>
 
-<!-- Các huy hiệu repo -->
 [![GitHub repo size](https://img.shields.io/github/repo-size/Dev-akabk/JPD123-zerotohero?style=flat-square&color=blue)](https://github.com/Dev-akabk/JPD123-zerotohero)
 [![GitHub stars](https://img.shields.io/github/stars/Dev-akabk/JPD123-zerotohero?style=social)](https://github.com/Dev-akabk/JPD123-zerotohero/stargazers)
 [![Visitor Count](https://komarev.com/ghpvc/?username=Dev-akabk&color=brightgreen&style=flat-square)](https://github.com/Dev-akabk/JPD123-zerotohero)
