@@ -48,13 +48,6 @@ Xong ấn vô dùng thôi
 
 ---
 
-<div align="center">
-
-  <p><b>Repository Statistic</b></p>
-
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dev-akabk&layout=compact&theme=radical&hide_border=true" alt="Top Languages" />
-
-</div>
 
 <br><br>
 
